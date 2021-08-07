@@ -1,0 +1,339 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="660,5639" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="670,5574" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="628,5484" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="MarketPrice.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,5213" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="574,161" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[Notes.Sheet(&quot;Date&quot;).Cell(&quot;ReformattedDate&quot;)]" />
+            <ui:PowerPointApplicationScope Password="{x:Null}" AutoSave="False" CreateIfNotExists="True" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="574,4922" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_1" PresentationPath="MarketUpdate.pptx">
+              <ui:PowerPointApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="MyPPT" />
+                  </ActivityAction.Argument>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,4671" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RPA Market" sap:VirtualizedContainerService.HintSize="520,4581" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,4360" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="466,2979" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="5" StartAt="1">
+                              <ui:RepeatNumberOfTimesX.Body>
+                                <ActivityAction x:TypeArguments="x:Int32">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
+                                  </ActivityAction.Argument>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,2819" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;A3&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[Now.ToShortTimeString]" />
+                                    <uix:NSelectItem DisplayName="Select Item '----- Select -----'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Exenon UI Pharma.">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                                          <x:String>----- Select -----</x:String>
+                                          <x:String>Exenon UI Pharma.</x:String>
+                                          <x:String>WEX Academy Inc.</x:String>
+                                          <x:String>Exxon RPA Corp.</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="48, 267, 160, 22" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="a2a12ac697b7b5106537235d7e987dc1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector" />
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="212, 467, 22, 22" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVEhL7ZS7isJgEIV9YkWwEETEWyEkeEmhduKlVUJS7YOo6WInGKwUBNGznOzoGmPW38Vkm/1gihkGvvwzQ1JIiORFKe0jlrgQEL2bf9GV7XYLz/Mke85LovP5DNu2kU6nUa1WUavVkMlkMB6PcTgcpOsxyqLT6YThcIhSqQTHcbDb7bDf77FaraBpGtrt9o8yZZFlWb4kik6ng36/L1kYZRHHxZdEsV6vkc1mJQujJOLiK5WKP6oouL9ms4nFYiGVIEoiXle9Xn8qarVamM/nUgmiJCIcneu6koXhx+RyORyPR6kEURZNJhPoui5ZmNFohG63K1kYZRFPl6MxDMNfPM+d4+JLKMnn85hOp9IdRllEKOMJ87ooZXBcvV7PlxQKBZimKd1BXhLdslwu/cXf7oSScrmMwWAglW9+LYqCkmKxiNlsJpUv3i4ilDQaDWw2G6nEJCL3f/bYRPf8vSiOuHAVxU1CIuATciKwqhhpLbMAAAAASUVORK5CYII=" InformativeScreenshot="cff0f490538dea824ce1c81848751094.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 467, 160, 22" ElementType="DropDown" FriendlyName="'WEX Academy Inc.'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKQAAAAaCAYAAAA5dfdEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOdSURBVHhe7ZfdTeQwEIDTEdSyEvWAUB6vjaWIK2AphId9pATj+bE9Ho/jJAu3OTSfZIk4ztie+eIsU3CcA+FCOociCzn9+evN291aohLSce6BC+kcChfSORQupHMoXEjnULiQzqFwIW/hfQ7TNIcLXzq3s1rIy+sUpqdzuPJ15uMcTtMU5ne+zlzD+Sk+80rlur6dYvHiddVO4fwRb2JhrRg876qi83zWGn+Kwwp5CXMnn/+S5+fn8Pn5yVcF6Ht5eeGrmvUnZCf5WTQWr1AnBcctyEJxVHyck6UdAWOfTvHlWDn+O3Ahu4CM4MXj42MlJfwNfXAPxmjWC2lukk6lUxTBlqn0jYRM8U9vaYS+XgZOUhiLJ2rzcvwQLmQXEO/h4aGSUsoI96SoiQ1C1p9gAjYeT6R3+GzXJ5MWYyxkRJyIq8ZneB0wP/6E6ElChcITHVtZM53Q5Z71ItDPh9TiHJaQ/BMmj5P5wnspXyIO3MNYqg/oSL+cHy0kHxzphU3zGM/rPNzycmspRzICG4Q0kgDJwuuyYUJfjxJYwIRt/PTWsdu5ERalXtPMc8QCNuLUJwytS6w/iydkScLldauXOD2j1oqF1315PVouoLPHjC0kzFP6aIyMQbJK+VVediClHMkIbBJSJxw3wAuupGgKw/d5UbnJAidS0VYnoi2OJb9c6xgV09gPok4vmKORRI6x4uB9q6/Exf3ItWMcKY6mI6Ta/6hm30WSciQjsE3IqlBq0yJJlhBWXwsnDk9IfSp0sIrTJJfiLsej/cgXJsuVvwSKShxeu4pBjcdYRVfyIbpP7bERtMEWUr8sVU16e/wmQMSRjMBGIcUmGhFKEqzTaI2QOIZjyr+XoM9Mp+U1LAtJcy0UcIOQi9LvFbKKDX+PTrLjCbmWzUKmZJ1hM0o6EnFWySCGQmKx5HOUVJ3EGp34gha6/8m2iqX6cM+tBOvnYHYLGYE+iA0xhuLsENJa2x3YLiRuNn5SjQ1SIuF0UsmMLAtJCWuK2REhYxUuo4rCwss1p39qtEgkmhzL65Pr53jV/Lz/6gWJ4+YUxyq6tQdzX7AfOgiavDfsEDJCXxs5b4yDeaF443lvZ4eQaeGGKKlIximRiqwbbLIbL9ImKdGRWIDPmhJxy/co4WVNF6OAPJ98tiuTGCfv3yTkUi40+4QEaI7SKMbBhXTuA8qy8AL+BlzI/wZ96v1OukJ683avlshCOs4RcCGdAxHCF0Dy/SZ6AgNRAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                          <uix:TargetAnchorable.PointOffset>
+                                            <uix:PointOffset X="-1" Y="-4" />
+                                          </uix:TargetAnchorable.PointOffset>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NGetText DisplayName="Get Text 'Exenon UI Pharma'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="255, 170, 113, 51" ElementType="Text" FriendlyName="'70.65'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' /&gt;" InformativeScreenshot="4aac05b6168b328f34c7f1b2658179c9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 108, 320, 30" FriendlyName="'Exenon UI Pharma'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' aaname='Exenon UI Pharma' check:text='Exenon UI Pharma' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("ExenonUIPrice")]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <uix:NSelectItem DisplayName="Select Item '----- Select -----'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="WEX Academy Inc.">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                                          <x:String>----- Select -----</x:String>
+                                          <x:String>Exenon UI Pharma.</x:String>
+                                          <x:String>WEX Academy Inc.</x:String>
+                                          <x:String>Exxon RPA Corp.</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="48, 467, 160, 22" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="0223fdcb979c2cb5354ac5a657cad83a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector" />
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="212, 467, 22, 22" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVEhL7ZS7isJgEIV9YkWwEETEWyEkeEmhduKlVUJS7YOo6WInGKwUBNGznOzoGmPW38Vkm/1gihkGvvwzQ1JIiORFKe0jlrgQEL2bf9GV7XYLz/Mke85LovP5DNu2kU6nUa1WUavVkMlkMB6PcTgcpOsxyqLT6YThcIhSqQTHcbDb7bDf77FaraBpGtrt9o8yZZFlWb4kik6ng36/L1kYZRHHxZdEsV6vkc1mJQujJOLiK5WKP6oouL9ms4nFYiGVIEoiXle9Xn8qarVamM/nUgmiJCIcneu6koXhx+RyORyPR6kEURZNJhPoui5ZmNFohG63K1kYZRFPl6MxDMNfPM+d4+JLKMnn85hOp9IdRllEKOMJ87ooZXBcvV7PlxQKBZimKd1BXhLdslwu/cXf7oSScrmMwWAglW9+LYqCkmKxiNlsJpUv3i4ilDQaDWw2G6nEJCL3f/bYRPf8vSiOuHAVxU1CIuATciKwqhhpLbMAAAAASUVORK5CYII=" InformativeScreenshot="7b4f5f31d1c4fab1955f0cc01840de1b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 467, 160, 22" ElementType="DropDown" FriendlyName="'WEX Academy Inc.'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKQAAAAaCAYAAAA5dfdEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOdSURBVHhe7ZfdTeQwEIDTEdSyEvWAUB6vjaWIK2AphId9pATj+bE9Ho/jJAu3OTSfZIk4ztie+eIsU3CcA+FCOociCzn9+evN291aohLSce6BC+kcChfSORQupHMoXEjnULiQzqFwIW/hfQ7TNIcLXzq3s1rIy+sUpqdzuPJ15uMcTtMU5ne+zlzD+Sk+80rlur6dYvHiddVO4fwRb2JhrRg876qi83zWGn+Kwwp5CXMnn/+S5+fn8Pn5yVcF6Ht5eeGrmvUnZCf5WTQWr1AnBcctyEJxVHyck6UdAWOfTvHlWDn+O3Ahu4CM4MXj42MlJfwNfXAPxmjWC2lukk6lUxTBlqn0jYRM8U9vaYS+XgZOUhiLJ2rzcvwQLmQXEO/h4aGSUsoI96SoiQ1C1p9gAjYeT6R3+GzXJ5MWYyxkRJyIq8ZneB0wP/6E6ElChcITHVtZM53Q5Z71ItDPh9TiHJaQ/BMmj5P5wnspXyIO3MNYqg/oSL+cHy0kHxzphU3zGM/rPNzycmspRzICG4Q0kgDJwuuyYUJfjxJYwIRt/PTWsdu5ERalXtPMc8QCNuLUJwytS6w/iydkScLldauXOD2j1oqF1315PVouoLPHjC0kzFP6aIyMQbJK+VVediClHMkIbBJSJxw3wAuupGgKw/d5UbnJAidS0VYnoi2OJb9c6xgV09gPok4vmKORRI6x4uB9q6/Exf3ItWMcKY6mI6Ta/6hm30WSciQjsE3IqlBq0yJJlhBWXwsnDk9IfSp0sIrTJJfiLsej/cgXJsuVvwSKShxeu4pBjcdYRVfyIbpP7bERtMEWUr8sVU16e/wmQMSRjMBGIcUmGhFKEqzTaI2QOIZjyr+XoM9Mp+U1LAtJcy0UcIOQi9LvFbKKDX+PTrLjCbmWzUKmZJ1hM0o6EnFWySCGQmKx5HOUVJ3EGp34gha6/8m2iqX6cM+tBOvnYHYLGYE+iA0xhuLsENJa2x3YLiRuNn5SjQ1SIuF0UsmMLAtJCWuK2REhYxUuo4rCwss1p39qtEgkmhzL65Pr53jV/Lz/6gWJ4+YUxyq6tQdzX7AfOgiavDfsEDJCXxs5b4yDeaF443lvZ4eQaeGGKKlIximRiqwbbLIbL9ImKdGRWIDPmhJxy/co4WVNF6OAPJ98tiuTGCfv3yTkUi40+4QEaI7SKMbBhXTuA8qy8AL+BlzI/wZ96v1OukJ683avlshCOs4RcCGdAxHCF0Dy/SZ6AgNRAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NGetText DisplayName="Get Text 'WEX Academy Inc.'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NGetText_2">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="318, 569, 50, 51" ElementType="Text" FriendlyName="'70.65'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' /&gt;" InformativeScreenshot="a826fbe302aea1afe78a584780c5243e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 507, 320, 30" FriendlyName="'WEX Academy Inc.'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' aaname='WEX Academy Inc.' check:text='WEX Academy Inc.' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("WexPrice")]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <uix:NSelectItem DisplayName="Select Item '----- Select -----'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Exxon RPA Corp.">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                                          <x:String>----- Select -----</x:String>
+                                          <x:String>Exenon UI Pharma.</x:String>
+                                          <x:String>WEX Academy Inc.</x:String>
+                                          <x:String>Exxon RPA Corp.</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="48, 467, 160, 22" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="0223fdcb979c2cb5354ac5a657cad83a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector" />
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="212, 467, 22, 22" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;input' tag='INPUT' type='image' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVEhL7ZS7isJgEIV9YkWwEETEWyEkeEmhduKlVUJS7YOo6WInGKwUBNGznOzoGmPW38Vkm/1gihkGvvwzQ1JIiORFKe0jlrgQEL2bf9GV7XYLz/Mke85LovP5DNu2kU6nUa1WUavVkMlkMB6PcTgcpOsxyqLT6YThcIhSqQTHcbDb7bDf77FaraBpGtrt9o8yZZFlWb4kik6ng36/L1kYZRHHxZdEsV6vkc1mJQujJOLiK5WKP6oouL9ms4nFYiGVIEoiXle9Xn8qarVamM/nUgmiJCIcneu6koXhx+RyORyPR6kEURZNJhPoui5ZmNFohG63K1kYZRFPl6MxDMNfPM+d4+JLKMnn85hOp9IdRllEKOMJ87ooZXBcvV7PlxQKBZimKd1BXhLdslwu/cXf7oSScrmMwWAglW9+LYqCkmKxiNlsJpUv3i4ilDQaDWw2G6nEJCL3f/bYRPf8vSiOuHAVxU1CIuATciKwqhhpLbMAAAAASUVORK5CYII=" InformativeScreenshot="e2e434322c26a7fd1ffddb29e548b020.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 467, 160, 22" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKQAAAAaCAYAAAA5dfdEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVHhe7ZdRjsIgEIZ7Iz1LE8+jMX3ca9RD7AH0ID746BFYhkJhplCsWVOo/5dMIjDwAJ8DbRQABQEhQVGMQjY/vwjEauFgQgKwBhASFAWEBEUBIUFRQEhQFBASFAWEvHWqaTp1tU2wLhsQ8qq6ptFSBXFeoBeE/BjH41E9n0/b8lDf6XSyLU7dQt571WoBu5ttG7SgawoJwQ0kIxWH/X7PpKTf1EdjlCOpWsjHpV1WDWNAyI9A4u12OyZlKCONhaI66hfyhcMf8vyVzipqRKDZfMND9Qc/7nKuZ9737WJKKXMyElUL6cVoVX+3XQIj16HXmRZ5zQshs/k607xZw8qs10it9+2EUuZkJCoXcsBXNCkmyTOV1VQyJxQTKJ8/EVYCISc4KXMyEguEjF9TBnMIwdh4YPIL2B+2vBa5IEH/3OEL3Jrtxc6w1Y2t5yIm5Av5JOe4foyXhEztyzt7nJ6T3OMVIBFzMhKbqJCMiWAZORbm/4+QIMX2hDRSuYozVCL//ovABMrn48r+LFUL+bh08fdeIIxpC0HYPCFQNt9Ky64/vcYoMftDgKVULqR4I0lRLINkiZxIRZvNN8g3YGo+7wd5qhYSbA8ICYoiKSQCsVY4RiEBKAEICQpCqT+Mmelt3shNCwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NGetText DisplayName="Get Text 'Exxon RPA Corp.'" sap:VirtualizedContainerService.HintSize="412,165" sap2010:WorkflowViewState.IdRef="NGetText_3">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="318, 569, 50, 51" ElementType="Text" FriendlyName="'69'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' /&gt;" InformativeScreenshot="25327aa64c65cb0715e8f07fec4b049b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Market' /&gt;" SearchSteps="FuzzySelector">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="48, 507, 320, 30" FriendlyName="'Exxon RPA Corp.'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' aaname='Exxon RPA Corp.' check:text='Exxon RPA Corp.' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("ExxonPrice")]</OutArgument>
+                                      </uix:NGetText.Text>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;B3&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;ExenonUIPrice&quot;)]" />
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;C3&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;WexPrice&quot;)]" />
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;D3&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;ExxonPrice&quot;)]" />
+                                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="412,78" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:RepeatNumberOfTimesX.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RepeatNumberOfTimesX>
+                            <ueab:CopyChartToClipboardX Action="SaveAsPicture" Chart="[Excel.Sheet(&quot;Sheet1&quot;).Chart(&quot;Chart 1&quot;)]" DisplayName="Get Excel Chart" FilePath="charts.png" sap:VirtualizedContainerService.HintSize="466,136" sap2010:WorkflowViewState.IdRef="CopyChartToClipboardX_1" ReplaceFile="True" />
+                            <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="466,204" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_2" MatchCase="False" Presentation="[MyPPT]" ReplaceAll="True" ReplaceWith="[Notes.Sheet(&quot;Date&quot;).Cell(&quot;Today&quot;)]" SearchFor="&lt;date&gt;" WholeWordsOnly="False" />
+                            <ui:ReplaceShapeWithDataTable AppendMode="CreateNewTable" DisplayName="Add Data Table to Slide" sap:VirtualizedContainerService.HintSize="466,303" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithDataTable_1" Presentation="[MyPPT]" ShapeName="Content Placeholder 4" SlideIndex="[1]" StartColumn="1" StartRow="0" TableToInsert="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;Harga&quot;)]" />
+                            <ui:ReplaceShapeWithMedia DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="466,232" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_1" Media="charts.PNG" Presentation="[MyPPT]" ShapeName="Content Placeholder 5" SlideIndex="[1]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ReplaceShapeWithMedia>
+                            <ui:SavePresentationFileAs DisplayName="Save PowerPoint File As" FilePath="[string.Format(&quot;Report{0}&quot;, Notes.Sheet(&quot;Date&quot;).Cell(&quot;Today&quot;))]" sap:VirtualizedContainerService.HintSize="466,214" sap2010:WorkflowViewState.IdRef="SavePresentationFileAs_1" Presentation="[MyPPT]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="1051, 575, 945, 1020" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="27dc1dbb74cd3f7051b1a074a3bbd57d.png" Selector="&lt;html app='chrome.exe' title='RPA Market'/&gt;" Url="http://www.rpachallenge.com/assets/rpaStockMarket/index.html" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:PowerPointApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:PowerPointApplicationScope>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>
