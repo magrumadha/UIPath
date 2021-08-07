@@ -1,6 +1,6 @@
 {
   "name": "GetTimeInKarawang",
-  "description": "Mengambil Waktu Di Karawang\r\n",
+  "description": "This workflows gets the current time and display it in the Output Panel",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -43,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "a7323fb4-4b1a-4138-b450-7d15ad30a144",
+      "uniqueId": "7281c292-9bdb-481a-95e9-2541508eb61a",
       "input": [],
       "output": []
     }

@@ -5013,15 +5013,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\6760\\.nuget\\packages\\": {}
+    "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "GetTimeInKarawang",
       "projectName": "GetTimeInKarawang",
-      "projectPath": "D:\\UIPath\\UI Path Academy\\01 RPA Starter\\Studio\\GetTimeInKarawang\\.local",
-      "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
-      "outputPath": "D:\\UIPath\\UI Path Academy\\01 RPA Starter\\Studio\\GetTimeInKarawang\\.local"
+      "projectPath": "D:\\Github\\UIPath\\UI Path Academy\\01 RPA Starter\\Studio\\GetTimeInKarawang\\.local",
+      "packagesPath": "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\UIPath\\UI Path Academy\\01 RPA Starter\\Studio\\GetTimeInKarawang\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5047,7 +5047,7 @@
             "version": "[21.4.4, 21.4.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\6760\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Agumg Trisnandar\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
   }
