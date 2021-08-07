@@ -1,6 +1,6 @@
 {
   "name": "InsertDataApp",
-  "description": "Insert Data From Excel To App",
+  "description": "Start with a blank project to design a new task automation",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.ComplexScenarios.Activities": "[1.1.3]",

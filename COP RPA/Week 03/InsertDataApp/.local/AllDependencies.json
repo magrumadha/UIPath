@@ -10138,15 +10138,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\6760\\.nuget\\packages\\": {}
+    "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "InsertDataApp",
       "projectName": "InsertDataApp",
-      "projectPath": "D:\\UIPath\\COP RPA\\Week 03\\InsertDataApp\\.local",
-      "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
-      "outputPath": "D:\\UIPath\\COP RPA\\Week 03\\InsertDataApp\\.local"
+      "projectPath": "D:\\Github\\UIPath\\COP RPA\\Week 03\\InsertDataApp\\.local",
+      "packagesPath": "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\UIPath\\COP RPA\\Week 03\\InsertDataApp\\.local"
     },
     "frameworks": {
       "net461": {
@@ -10187,7 +10187,7 @@
             "version": "[1.6.4, 1.6.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\6760\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Agumg Trisnandar\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
   }
