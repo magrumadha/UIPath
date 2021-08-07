@@ -1,0 +1,143 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1173,1464" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="508,1399" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="466,1309" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="olx.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="olx" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1038" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="412,948" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,727" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Masukan Nama Mobil" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,225" sap2010:WorkflowViewState.IdRef="NTypeInto_1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.olx.co.id/" DesignTimeRectangle="674, 91, 635, 44" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAn8AAAAwCAYAAABg3xxrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAv0SURBVHhe7ZzZk1XVFYf9E/xP8mL55ov/hnnwIQ+pVB5SqSRVMWXFRI2J5RQiDgwSkTJOTKI4gICgII7ghCigjA5MAjKpuON3uKtdvbm3+7TdF+g+31e1q+lz9t5n7bV3s3537X3uFafPnC2LV68tV193fbnymmvLFb+4ymKxWCwWi8UyUwvCr+8Ni8VisVgsFsvMK2T8+IeIiIiIzExGib/Y6hURERGRmcko8Rf/EBEREZGZieJPREREpEMo/kREREQ6hOJPREREpEMo/kREREQ6hOJPREREpEMo/kREREQ6hOJPREREpEMo/kREREQ6hOJPREREpEMo/kREREQ6hOJPREREpEMo/kREREQ6hOJPREREpEP8LPF3w6zZ5Zc33DiwLF2ztlfz0rD9s93lXwseLidOnuxduTjwXMa/cMWz5bvvv+9dHc1XR46Uv9734ITte3XL1vLQsqfL2W+/7V25kN0HPi/r3nyrnDl7tvmdNm2fg+3M64GDB3tXfoJr3KPOsGkzzgxjY4y0m46E/cP0Lb7EpxP5uzx49GhZtWlzOf7Nxf0bEhGR4fOzxN83p041QYuy5vU3ym3zF5QvDh0euXb6zJlezUvDpRZ/g0QUIM6oMwzx985H28s/5i0oh45+3fyu+Lv8CfsvN/H32YEDzZzzU0REZhY/S/xlJiIwLhaXUvz99rbbyx/v+ncj8mpOnzlb7n/iqXLHw49M2L6JiiJQ/F3+hP2Xm/gTEZGZy1DF3+Gvj5X5S5eXX99yWyOIXtr8+sh2aAS9ze+9XxYsf7qp8+dZ95ZNW99tMouLV68pv7v9zqYseWnNyFZmPyESwS0EAPeyTV+fOFHuXvRo+e/yFSP90OaFjZsau351081l1qOPlf1ffdXcgxjX+zt2lnt+bEu27vYFC8un+/f3alxIPHf52peb/k6ePt27c56de/eVW+bOL8+s33CBz7KvGPOTq1Y3fgiwZ96SZeWVd7Y028bYPGfxkqZdUM/FWHNTg+0TEX+1vcwX4jZAaHD/7W0flZvnzGvsnf3YE812YvD9j2uB+Wbe6eeJF1eV517ZOCL+Yl65xr141vOvbmzuQawjMtBcjzXz9Lr1I3Xghx9+KB/s3NVkqZlLfMizsQHa9hM2xxzU62Y88BvzRlv8Ql/YNNW+zYQfs/jj2ljrv14Pbf4exrIL/6/c8Grz4SePhecw//u+PP/s8cYuIiKTZ2jiLwTXoyufb/7z/3j37iZgElwJBBFs//7g3B+D8s6m/qrXNjf/4RM4yJxxbev2j8uf7p41kkmbqPhD7CH6EJgRRAjgiAkycAQ8Ag5iiyB89Pjxpg59RVBk64tt7bmLlzaBL4uyDM+lj0/27GlEHmIvYMzL1q4ri55d2Ywl+wz/4IfwFWMkaGaxij0EXNpjy57Pv2jqYF/YU8/FoLnpRx3sM7XPjxw71mwvE5iZI/yDL59a9VI5d+5cUwch8Jtb/9n4HXujTj4PifD5w133NB8A6Adhy/zX4g+B8sYHH46qU6+j399xd/PhAtvojzq0Cd76cFvzLNpzjo119Zf/3Nf4qG0/1KM+7WiPPfgAX1B/PHgu64d1hE9inpnXqfZtphZ/bdZ/vR4Y93h/D+PZxd8DfbJ2AX8iCB98akmzztuMXUREJs/QxN+Lm167QCgRRMkWEAQj2G7Zvr13tzSZMoLL4y+8OPKfPT/5HdFDAKmFCAwSfwSQFS+vb0Qo/w4IMmQgduzZ27tSmiBIBiL6pS/EKi9oBLv27S833T+nr0CCCJgENwJeDloEVWwic5J9FgHwgScXl1PprGS8GIJoAdrU/iRbUtuc56L+fSzC9n5jq33OGAj8ud8Nb78z6lkIgdpexhJ1Yq5DxAE/V7/2+gXiDzEWUIc29TrCh9EP64T1EmIHG7AlPwtYj397YE4juNv0w1lKRH0WldE3vh4Pxl8LRYQXH3am0rc1tfhrs/7r9cD4xvt7aDvnMZ/xe3ywazN2ERGZPEMRfxFs2DLLIIoIngQL6tMugg3UQSrg9xAEtRCBaBcBmHv0TbC/cfb9o7azBlH3229c1OFaBLuaHDAJZNSNTApBMARL7hvb2c5lazNTCw/ahA8CMpkE8Rh3bXO/MQwC28lAjVWyz2vqZ+U5C2JeqIOPmBuypJk8znpegyw66Is+6zo8P3zH/CNcaJdB9CH+sKtNP9TDZrJaQXw4iTpjQR2yud9+913vSrszfxP1bU34cSwb8WVe//ysxV/dP/e4FnXa2IXwi63f/P/BIPo9V0REJsdQxB8ZrHt721l1YeuIgE992uWgNyhI5aBSBymIdhG4ucdzsIGtLIRXDYEfccW2XrYv+m0T7GpoGwETkYfYI0uEkCMTGFml3Hf4IWzPMO7wBffrwFr7q7a53xgGge1kftiaC7uicC1nhRgDW/VkVPFz+C4/K89ZQPuoM8iXeZz1vAa0IYO294svm77op66TfZfnJRNtud+mH96mzmsll1rU9SP3FWQbYCp8W1OvExhv/dc+67eW6jlsYxfZagQ3wg8hmOu3GbuIiEyeoYi/CDZs4XG9LoghftIugg30C1KQgwqBpo34ow4ZHw75k13I2b/YguWMYWxR1fa0CXY18VzuE8gQe4g+Mk5s7cWh9tw3tpP5IxBmEBIIivAFbXKghMj8sTUGtc39xjCIbHtN7XOymmTe8C1zCdzLzxpPCNAnfdTZuDzOel4DPjyQgaMP+qLPug7PD98x9/g/zpoFZPDoB7va9EO9W+c+VD4/eKipnwtbmMz5WNAPgit8BvHcqfRtTfgxxtFm/fMzr4d+a4l7XIs6bezibB9n/HjpiZ95C73N2EVEZPIMRfyF8OGtvXhhAThoTpCEOthAHaSCHFQ4r0QAfu+THb27588O3ff4kyOBOweMONyeX56oAxvUZ6/aBLuaul/EHn0S5OJQO+S+w1fT6cxfvyDP2c38rPGEQJz3mqozf4w1w/NjHeGztmf+xuqHOeGDBOIkgwjPgm4QzOV4Z/76+W2ivq0JP8Y4+s11bUddp99a4h7Xok5bu+iLF0PwfT5D2GbsIiIyeYYi/oDsCOIl3mAluPDyBVuxBGPq0y6CDdRBKshBgSBLNi3eVCR7QzaF7aEI3HXAIdgSdHnTk+AfwoqzWrQn43DnwkWjtr3aBLuaOmDGeOg3ZzjqvvFPv7d9OfwegpA29MNYsZksFnWyaKz7zb/jczKMdaYtqG3PcC2LP8bCduHGLe82vuTAPm/k5me3EQL5bV/miH7oN9qF/3g2Xx/CSzvxBm4IOfqiT8aa4fl5HSG8+r3tyzPb9sP5PjJW2EN72mzb9WkjRN/szS9fn0LpB89FhDKveQ7zupsq32bCjzGONuufn3k91GsLuMe1qNPWrnh+vAUctBl7DV81w4e7uM/fz/+ee6F8efj8ucz6dxERGaL4AwRffGcX5ZFnVjbXgPq0i2ADdZAK6qBCH/FdaWS+CBJk1iJw9ws4BH/qEiwI9nz1DOcBCXgEZDKJBPFBW6hQB7uaOmACAY1MZc729Os7+4oA2OZ7/qif32Ku+82/U/h39nemn+0B17gXbQnYZOMIzNhL8EX8IKZie72NEIjvzGNeop823/NHdjBEQ4yLsWZ4fl5HzDkZu5hzfMizsQHa9hM2055+yJYxx9FPXb8mr13a0hc2TbVvM+HHsKvN+q/XQ722gHtcizpt7SIDjg/wW6bN2Gs4h0k2FpEHfD0MdseHnPp3ERGZAvEn0wO2iAnCZFSmCyFaakF2uRLn2WpRI6NhLSI0Q7CJiMjFRfHXAdiuJDvKdhpZn+nCdBN/ZJnYSs3nXOUnyOzxhjbb3n5xs4jIpUPxJ5ct0038ydjwljYvenDWLx9pEBGRi4viT0RERKRDKP5EREREOoTiT0RERKRDKP5EREREOoTiT0RERKRDKP5EREREOoTiT0RERKRDKP5EREREOoTiT0RERKRDKP5EREREOoTiT0RERKRDjBJ/V15zreJPREREZAYzSvxdfd31ij8RERGRGcwo8bd49drRFywWi8VisVgsM7ecPnO2IADJAMYWsMVisVgsFotlJparyv8Bd3o2JNVzH3sAAAAASUVORK5CYII=" InformativeScreenshot="0f25ba494f6bb40a9667863a8aec2deb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OLX Pusatnya Nge-Deal' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.Text>
+                        <InArgument x:TypeArguments="x:String">
+                          <ui:AskWhenRun x:TypeArguments="x:String" />
+                        </InArgument>
+                      </uix:NTypeInto.Text>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.olx.co.id/" DesignTimeRectangle="1308, 87, 52, 52" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='container' tag='DIV' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVGhD7Zo9aBRRFEbXytbWxia9EUwKxUYstEghYiApthBFxFIUBMHfDVqFdCKSRmMsRcSfQrAJQTQSoxjdJIVGLVKk0s0k1ZUz5Eo2ucPOm7yFt8P74DDM3PuGOcyy9xVTSVbXpEyUT6jr97wMLC1Kpbuno9ixr1f2nhyQkbHxrUJgLeoUNkqVQog3VSohfn6lEoIoFDpRKHSiUOhEIRdOXLgktfuj8ub9lBCOnHPd6vdBW4S6+wdlYvpjKpEV6vRZ67eDd6Frd++tP7LIh9mvcvbmkOwfrKY1jpxzXUP/5ntsB69Ce472rT+myMuJSbNHoa5hndVTBK9C4y9epQ84MvbYrG+GPsI6q14Eb0L9Fy+nD/f67TuzngX9hPVW3RVvQsMPH6UPdn7ojlnPgn7CeqvuijehyZlP6YMdqJ4y61nQT1hv1V3xJqSxaq3QWDVXvAnp8NS/6LzQT6a+zJp1V7wJsQMgzBmrngX9ZPTJU7PuijchtjOEoWnVs9Ahe65226y74k0IdLvTaqgqOlzr33+Y9SJ4FWJvpmk1XHWoktPXb5k9RfAqBBv3cgxN5oz+lXPkXIepppEksrP34JZ7FcG7ELA3021QVmbqc1K9cjWVIUvLy7Lr0GHzfi60RUhhO8MOQIcuEg+ePZczN2r/e3gzyJCFxZ+y+8ixpnu40lahvPBmkCHT3+rS1Xfc7MtDEELAm0GGfJ5fMHvyEIwQ8GaQIVY9D0EJ+SAKhU4UCp0oFDpRKHSiUOhEoZAp3YcXpfs0pvnjpV9z5fq8rLGSyEqy2nSxk6n8+duQ8kityT9pvUuM6G7M1AAAAABJRU5ErkJggg==" InformativeScreenshot="a08423f48f0691b192ed9d0bacfec660.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OLX Pusatnya Nge-Deal' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[olx.Sheet(&quot;hasilolx&quot;).DataTableOutValue]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Nama Mobil'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Tahun'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Harga'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Lokasi'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Gambar URL'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='alt'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='figure' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="50">
+                      <uix:NExtractData.NextLink>
+                        <uix:TargetAnchorable BrowserURL="https://www.olx.co.id/items/q-Toyota-avanza" DesignTimeRectangle="1061, 795, 116, 48" ElementType="Button" FriendlyName="'muat lainnya'" FullSelectorArgument="&lt;webctrl aaname='muat lainnya' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='muat lainnya' tag='BUTTON' type='button' check:text='muat lainnya' /&gt;" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Toyota Avanza di Indonesia - OLX Murah Dengan Harga Terbaik - OLX.co.id' /&gt;" SearchSteps="FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1073, 810, 92, 19" ElementType="Text" FriendlyName="'muat lainnya'" FullSelectorArgument="&lt;webctrl aaname='muat lainnya' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='muat lainnya' tag='SPAN' type='' check:text='muat lainnya' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAXCAYAAAD0v0pBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARlSURBVGhD7VjPa1pZFPbPcJtlVyLM5mUT4iKlLkoQIrQSaHA204BhcISCoZtRqFRCFk0hoBAIKUQQHgwmULAMVCK4ECq0CAUXhZBAA0IgJAXhm3PvPe+XPqcvcVIz9H1wkXvuufede793vnueAfiYKnwCpgyfgCnDJ2DK+DkIOO3iqHfOnbsFBwFHG78gEFIt8qbHVju6KD6wfHJtNv9AmDFudNjyHZy/w6om5swi94FtdwhjCQg8qmCEgm4ZYWOc2n9LwBn2nqp1Y/oZ20ZxbQIGXbyKzyIwl0H1lG13COMJCD1EscsDjHbpoW38f0LAHYcrAZFHCfkbLtkZMOQnQePKTxFgHZxFiPthnjTLSC7OS3tgbgnJ7Rb6AzHSQU7Y7O2pjhM5ywk3AvpdHekn9xEUdu0+onkdny540Lb2cLzZgxaKKZ43t4L022M5w4tP/yCj4nhQhrntXgURYQutoPSF+oMz1Lcz0ObUWjOLGRRbzpfLlYDYmwqyQjfti7P8BF9UUHIcuDcCTv5a4wNKIJlfR5SD0rY6uMQxalsFPOb7JZwqoLjfQV/OdGKYgMsPr6GJfmgesTytsUByQ/1g6pAJHE+AaDOL9ELxHPPgvPiIu0X2EyixVp/oa8pHvjxnqKY4lvg60tkVzEj/JbqLvqkJBHcC9B7qL8RkS4aU/Mwi2+wNHbgXAnoocdak36uHXzYLipDQJo6kZZQ0NzgJ+IZ6XvXNouFLBVG57hr2pOaPJyCyw5sb9PCK41t9K6olLz7nqD1jH/lsqy/jN7OhgPqVWIBilWdKNlv2ut8B5GAckJIhlh9NLDZ+Q+MJcMGpjphcZxIC3GDE930CrOcM27z40Ev0viD78o03M8J47ijMDPFCAK5algwZ8iMn3pCA8y6qGxlbKhttQgKEzu6sI2bcLWa7fQJw1UCa+oFQBntVJuOPQ1M6+91D5H5P4J4sg23NEwGyr2QouqzkR23gJgQco7Ss+trzCmrNFuoHm5yiE0oQp3XwyWtUxbrNXSTluj+AAJsEBjUVR/KAP/hMKVzC6n6D4mqh+lIVN54JQHuTdZqaRgc1VLEMbyhq6PAFZQ9fqDJYU25+w55RaHzeHU9A1XAahTNGK5ZsS43jojEkBbdJgP0uE42+Nfj1N+XmV938nvq0e10CBhQ8p0942yhJhzdE983+ippHWXIv7kw5GSx9DBUXVT+4IMpYu49xSRkZRzYqJSNxWwVmgzNGcfHxHCprxbpGyWdVJ7dLgCnVZA88e2dVbiTbqjpTZxKJcykrWr5BlZ/CvxNAaG8L+aFq6CMbXAjAgMrIPJdZdHiPdzqovVQ+ZrBfrXo6uLCG4t+VkTIOXxvILSstDy54IYBwQVWZ8WxRp+uHKDoqrlsmgGSo9lzZVXVkod8qc1lMJKTKqO3/Kf3s/zI4CPBxA5DkpWUGrKN2g//7fAImQHvHktIwZaQhK9eBT8AEaG8JeZkf+uvjevAJmDJ8AqYMn4CpAvgHrYPPfdLNnT8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NExtractData.NextLink>
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="640, 422, 960, 2042" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' tag='UL' /&gt;" InformativeScreenshot="7c50884c7c5bbb7c08f13b05e92754e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Toyota Avanza di Indonesia - OLX Murah Dengan Harga Terbaik - OLX.co.id' /&gt;" SearchSteps="Selector" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKsSURBVFhH7ZbZjtowFIZ5pL5gq2HfAmHf9+2FuOlcTMUNKgikSEhlhzP+kzhkgidwRr1rLf1KcoG/z8Y+duB/U7XxeEzIaDSi4XBIg8GA+v0B9fp96vV61O12qdPpULvdoVa7Tc1WixrNJjUaTarXG9TudIxSqfTN7o7fAL9cLnc5u3P25kzX65UmkwnNZjNIfV0CIwfwdDrRETnKHOkgc7Cee/G0cjAlILDZbOjt7RfVGw1D/4oEpl0l4MDx7iNgGAat12v6+fpK1Vrd0HWdJ4H/HAImXCUAuAO+F1itVrRcLmk+n9N0OqVKpWrYXT/XsOAcARt+N/0usFdA07QPyRUKZHf9XMNqNwUcuM/0728CeF+Ikf9eyCzEbKwpl88zBcRWkwI3sAtuAt2BhCWwc2e3F+voTHqOKYB9jq32EC4gjgDe3fD93hHI6jmeAIqMJYAZuIHNCJnbqOXTC7cEtrZAJqvzBFDhUFzUYHxLuC0ggKrRSwEtm+UJoLyaM+ABmwHM+VbBLQHApUA6k+EJoLZjBu7AiAT7wOXoHQGNKYCDBXvagbhFGHApkEprTAFxqn2cARvqCxfxwC2BEyVTaZ4AjlRnBjxQJVgxchlU00QqxROo1euWgOjcH4x8Dt9ud6ZAPMkUqNZqdBICaqA7/vA/tkAskeQJVKrVBwIW+BHcEYgneALlildAwGQE4FMw4oJLgWgszhQoV8ztI2EPoXbcYLdAJBbjCZTKZVNABVFGAZaBQDjKFCiWSs8JKIDeQCAUifIECkU/gd1TYBkIBMMRnkC+UDQrmIRxgN6YAqEwTwB3OPxQ1SE36OeFLSDucPjh38qPYIgngDscrlG4yeAygfMcRypONRwsqO0or6hwKDLY59hqWO1YcPjPMe0YOeDfX4I8gX+oBQLvEwJiQgPuVJwAAAAASUVORK5CYII=" InformativeScreenshot="ac4a30b4880500cd87c0775df3679c13.png" Selector="&lt;html app='chrome.exe' url='www.olx.co.id' /&gt;" Url="www.olx.co.id" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>
