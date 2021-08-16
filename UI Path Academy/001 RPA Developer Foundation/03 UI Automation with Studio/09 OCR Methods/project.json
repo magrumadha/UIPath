@@ -1,12 +1,12 @@
 {
-  "name": "08 ScreenScraping",
-  "description": "Retrieving data from an application using all the output methods to facilitate a comparison.",
-  "main": "ScreenScraping.xaml",
+  "name": "09 OCR Methods",
+  "description": "Using the OCR methods to retrieve data from an application.",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.5]",
     "UiPath.System.Activities": "[21.4.1]",
-    "UiPath.UIAutomation.Activities": "[21.4.3]"
+    "UiPath.UIAutomation.Activities": "[21.4.4]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -42,8 +42,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "ScreenScraping.xaml",
-      "uniqueId": "70bb20c0-9fd8-4372-bccd-b854cef555ca",
+      "filePath": "Main.xaml",
+      "uniqueId": "6c3418c0-9853-49fe-8655-e4179f9fb6fd",
       "input": [],
       "output": []
     }
