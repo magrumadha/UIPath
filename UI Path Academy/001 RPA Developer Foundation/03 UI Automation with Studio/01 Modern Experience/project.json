@@ -1,6 +1,6 @@
 {
-  "name": "11 Practice 4",
-  "description": "Invoke Workflow File",
+  "name": "01 Modern Experience",
+  "description": "UI automation in the modern experience",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -43,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "42219e82-2ba5-42ef-8bad-be0bea8e4c40",
+      "uniqueId": "0fd2f397-2d0a-41ab-b5a0-e3dfdafb0ee1",
       "input": [],
       "output": []
     }
