@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C+xkI6n5UU4+OS8mBbK+2QDqkFHN0ByDn4DAlV5MRwiHAH+jtHmwinBaG4iXtuu5nhWenlo/N/E55KdrXTYPXQ==",
+  "dgSpecHash": "3w8yMkXSKDTSMFp+RCfHdcTX0N0pJJ919F27Lq3gVnJUkHqJpkr03/9kS2J8FAS6FwFM1eLRnufgCeoVhtHGcg==",
   "success": true,
-  "projectFilePath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\04 RPA Challenge\\.local\\",
+  "projectFilePath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\05 RPA Challenge\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\agung\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\agung\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

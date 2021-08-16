@@ -1,6 +1,6 @@
 {
-  "name": "04 RPA Challenge",
-  "description": "04 RPA Challenge",
+  "name": "05 RPA Challenge",
+  "description": "RPA Challenge Anchor\r\n",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -43,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "eb1aa56d-56f9-4de2-894a-e069e32e40f9",
+      "uniqueId": "a70f8e70-41c5-4040-ba99-e758cb9f650a",
       "input": [],
       "output": []
     }

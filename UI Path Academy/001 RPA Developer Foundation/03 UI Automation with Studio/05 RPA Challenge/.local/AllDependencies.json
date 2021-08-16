@@ -5019,11 +5019,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "04 RPA Challenge",
-      "projectName": "04 RPA Challenge",
-      "projectPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\04 RPA Challenge\\.local",
+      "projectUniqueName": "05 RPA Challenge",
+      "projectName": "05 RPA Challenge",
+      "projectPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\05 RPA Challenge\\.local",
       "packagesPath": "C:\\Users\\agung\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\04 RPA Challenge\\.local"
+      "outputPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\03 UI Automation with Studio\\05 RPA Challenge\\.local"
     },
     "frameworks": {
       "net461": {
