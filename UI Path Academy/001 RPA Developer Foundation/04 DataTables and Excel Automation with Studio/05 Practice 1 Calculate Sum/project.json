@@ -1,7 +1,7 @@
 {
   "name": "05 Practice 1 Calculate Sum",
   "description": "Calculate the sum of the values from two columns in an Excel file in 3 ways",
-  "main": "Main.xaml",
+  "main": "Sequence A.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.5]",
@@ -42,8 +42,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "96ca5780-6aac-4af5-8944-b9fbf6bf4ffa",
+      "filePath": "Sequence A.xaml",
+      "uniqueId": "b5e39e44-4db7-454f-9293-98bb6d244310",
       "input": [],
       "output": []
     }
