@@ -3193,7 +3193,6 @@
       "path": "documentformat.openxml/2.5.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "documentformat.openxml.2.5.0.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "lib/DocumentFormat.OpenXml.dll"
@@ -3251,7 +3250,6 @@
       "path": "google.apis.calendar.v3/1.43.0.1872",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE",
         "google.apis.calendar.v3.1.43.0.1872.nupkg.sha512",
         "google.apis.calendar.v3.nuspec",
@@ -3299,7 +3297,6 @@
       "path": "google.apis.gmail.v1/1.43.0.1859",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE",
         "google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
         "google.apis.gmail.v1.nuspec",
@@ -3326,7 +3323,6 @@
       "path": "google.apis.peopleservice.v1/1.43.0.1876",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE",
         "google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
         "google.apis.peopleservice.v1.nuspec",
@@ -4782,6 +4778,7 @@
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "AllDependencies.json",
         "build/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
         "build/ActiproSoftware.Docking.Wpf.dll",
         "build/ActiproSoftware.Editors.Wpf.dll",
@@ -4937,6 +4934,7 @@
         "lib/net461/zh-CN/UiPath.UIAutomationNext.resources.dll",
         "lib/net461/zh-CN/UiPath.UiAutomation.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Wizards.resources.dll",
+        "nuget.cache",
         "uipath.uiautomation.activities.21.4.4.nupkg.sha512",
         "uipath.uiautomation.activities.nuspec"
       ]
@@ -5019,11 +5017,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "09 Practice 3 Dictionaries and Integer",
-      "projectName": "09 Practice 3 Dictionaries and Integer",
-      "projectPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\09 Practice 3 Dictionaries and Integer\\.local",
+      "projectUniqueName": "12 Practic 6 Replacing Placeholders",
+      "projectName": "12 Practic 6 Replacing Placeholders",
+      "projectPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\12 Practic 6 Replacing Placeholders\\.local",
       "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
-      "outputPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\09 Practice 3 Dictionaries and Integer\\.local"
+      "outputPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\12 Practic 6 Replacing Placeholders\\.local"
     },
     "frameworks": {
       "net461": {

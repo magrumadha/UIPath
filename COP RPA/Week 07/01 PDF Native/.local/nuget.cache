@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tOqD+2qmi8OAk1OAs2JY7w5izfUexqZwNuaoxZo59quNO6D4Rslm43Zcy3WNqwXj40BfT+0uXf65A6VEDM2CgQ==",
+  "dgSpecHash": "efdT3JT9T/naKQNcfzFiQai8LOt+mGlHTTea7HNsCSTEtc0ZaOKIr6vVvYoe1ExMoOHYeJqpoydNBeCO9gK2EQ==",
   "success": true,
-  "projectFilePath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\09 Practice 3 Dictionaries and Integer\\.local\\",
+  "projectFilePath": "D:\\UIPath\\COP RPA\\Week 07\\01 PDF Native\\.local\\",
   "expectedPackageFiles": [
+    "C:\\Users\\6760\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645\\bitmiracle.docotic.pdf.7.5.11645.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\6760\\.nuget\\packages\\uipath.mail.activities\\1.10.5\\uipath.mail.activities.1.10.5.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\uipath.ocr.activities.3.0.0.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\uipath.ocr.contracts\\2.7.3\\uipath.ocr.contracts.2.7.3.nupkg.sha512",
+    "C:\\Users\\6760\\.nuget\\packages\\uipath.pdf.activities\\3.4.0\\uipath.pdf.activities.3.4.0.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\uipath.platform\\21.4.0\\uipath.platform.21.4.0.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\uipath.system.activities\\21.4.1\\uipath.system.activities.21.4.1.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\uipath.telemetry.client\\1.3.18\\uipath.telemetry.client.1.3.18.nupkg.sha512",

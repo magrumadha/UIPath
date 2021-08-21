@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tOqD+2qmi8OAk1OAs2JY7w5izfUexqZwNuaoxZo59quNO6D4Rslm43Zcy3WNqwXj40BfT+0uXf65A6VEDM2CgQ==",
+  "dgSpecHash": "C1Yi46M7huvsEi5/ALk3mZjeO03eptb4401FKsIUzKme+52t9ZbC5PLH7h3gMZhNiueILdEdt47zJ3RjzpmSDQ==",
   "success": true,
-  "projectFilePath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\09 Practice 3 Dictionaries and Integer\\.local\\",
+  "projectFilePath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\13 Practice 7 Extract Email Address\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\6760\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\6760\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
