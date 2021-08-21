@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sbzu6JstBahbZpGCN7WZYol/NoIccqiKGQ3ioahpvNLjyCnVuGjUJOi+mPc/DIjO207e+hbfUgn6l8yX/sSRCw==",
+  "dgSpecHash": "O56rjSj46NWH4npVrX+BVDecDRFF+wYL5hDseaWRrVSejbo1GNW9lOaZePo1MK7c9aFf/aAs4NZ5zG+6+cuYHQ==",
   "success": true,
-  "projectFilePath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\06 UsingDatetime\\.local\\",
+  "projectFilePath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\07 Practice 1 Lists\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

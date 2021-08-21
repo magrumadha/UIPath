@@ -3193,6 +3193,7 @@
       "path": "documentformat.openxml/2.5.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "documentformat.openxml.2.5.0.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "lib/DocumentFormat.OpenXml.dll"
@@ -3250,6 +3251,7 @@
       "path": "google.apis.calendar.v3/1.43.0.1872",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE",
         "google.apis.calendar.v3.1.43.0.1872.nupkg.sha512",
         "google.apis.calendar.v3.nuspec",
@@ -3297,6 +3299,7 @@
       "path": "google.apis.gmail.v1/1.43.0.1859",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE",
         "google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
         "google.apis.gmail.v1.nuspec",
@@ -3323,6 +3326,7 @@
       "path": "google.apis.peopleservice.v1/1.43.0.1876",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE",
         "google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
         "google.apis.peopleservice.v1.nuspec",
@@ -4778,7 +4782,6 @@
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "AllDependencies.json",
         "build/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
         "build/ActiproSoftware.Docking.Wpf.dll",
         "build/ActiproSoftware.Editors.Wpf.dll",
@@ -4934,7 +4937,6 @@
         "lib/net461/zh-CN/UiPath.UIAutomationNext.resources.dll",
         "lib/net461/zh-CN/UiPath.UiAutomation.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Wizards.resources.dll",
-        "nuget.cache",
         "uipath.uiautomation.activities.21.4.4.nupkg.sha512",
         "uipath.uiautomation.activities.nuspec"
       ]
@@ -5017,11 +5019,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "06 UsingDatetime",
-      "projectName": "06 UsingDatetime",
-      "projectPath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\06 UsingDatetime\\.local",
+      "projectUniqueName": "07 Practice 1 Lists",
+      "projectName": "07 Practice 1 Lists",
+      "projectPath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\07 Practice 1 Lists\\.local",
       "packagesPath": "C:\\Users\\Agumg Trisnandar\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\06 UsingDatetime\\.local"
+      "outputPath": "D:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\05 Data Manipulation Studio\\07 Practice 1 Lists\\.local"
     },
     "frameworks": {
       "net461": {
