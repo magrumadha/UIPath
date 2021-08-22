@@ -3,7 +3,7 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "AcmeLibrary": "[1.0.11]",
+    "AcmeLibrary": "[1.0.12]",
     "UiPath.Credentials.Activities": "1.1.6479.13204",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.System.Activities": "[20.10.4]",
@@ -51,5 +51,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }
