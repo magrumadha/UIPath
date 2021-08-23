@@ -5166,15 +5166,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\6760\\.nuget\\packages\\": {}
+    "C:\\Users\\calin.grigorescu\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "AcmeProcess",
-      "projectName": "AcmeProcess",
-      "projectPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\10 Introduction into Logging Studio\\Practice - Add Log Messages (Starting Project)\\.local",
-      "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
-      "outputPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\10 Introduction into Logging Studio\\Practice - Add Log Messages (Starting Project)\\.local"
+      "projectUniqueName": "AcmeProcessSolution",
+      "projectName": "AcmeProcessSolution",
+      "projectPath": "C:\\Users\\calin.grigorescu\\Documents\\Projects\\2021\\Foundation Work\\19. Logging\\Practice - Add Log Messages (End Project)\\.local",
+      "packagesPath": "C:\\Users\\calin.grigorescu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\calin.grigorescu\\Documents\\Projects\\2021\\Foundation Work\\19. Logging\\Practice - Add Log Messages (End Project)\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5205,7 +5205,7 @@
             "version": "[20.10.10, 20.10.10]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\6760\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\calin.grigorescu\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
   }
