@@ -5015,15 +5015,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\agung\\.nuget\\packages\\": {}
+    "C:\\Users\\6760\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "03 DataType",
       "projectName": "03 DataType",
-      "projectPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\02 Variables, Data Types and Control Flow in Studio\\03 DataType\\.local",
-      "packagesPath": "C:\\Users\\agung\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\02 Variables, Data Types and Control Flow in Studio\\03 DataType\\.local"
+      "projectPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\02 Variables, Data Types and Control Flow in Studio\\03 DataType\\.local",
+      "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
+      "outputPath": "D:\\UIPath\\UI Path Academy\\001 RPA Developer Foundation\\02 Variables, Data Types and Control Flow in Studio\\03 DataType\\.local"
     },
     "frameworks": {
       "net461": {
@@ -5049,7 +5049,7 @@
             "version": "[21.4.4, 21.4.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\agung\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\6760\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
   }
