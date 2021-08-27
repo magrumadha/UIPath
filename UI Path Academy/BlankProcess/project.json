@@ -1,14 +1,12 @@
 {
-  "name": "Kurs v1",
-  "description": "Kurs v1",
+  "name": "BlankProcess",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.5]",
     "UiPath.System.Activities": "[21.4.1]",
-    "UiPath.UIAutomation.Activities": "[21.4.4]",
-    "UiPath.Word.Activities": "[1.6.4]"
+    "UiPath.UIAutomation.Activities": "[21.4.4]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -45,7 +43,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "47154dd3-c0ca-4fa4-bbfd-959aa8dcc054",
+      "uniqueId": "10c59569-a5f4-46de-ba01-37a979072b18",
       "input": [],
       "output": []
     }

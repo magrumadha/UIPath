@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1205,2511" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1205,3236" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="28">
+    <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -29,10 +29,11 @@
       <x:String>UiPath.Word.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,24 +63,29 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="602,2446" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="628,3171" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="chrome" />
+      <Variable x:TypeArguments="x:String" Name="tgl" />
+      <Variable x:TypeArguments="x:String" Name="bulan" />
+      <Variable x:TypeArguments="x:String" Name="tahun" />
+      <Variable x:TypeArguments="x:String" Name="startdate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="560,2354" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[chrome]" Url="https://www.ortax.org/ortax/?mod=kursbi">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="586,2779" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[chrome]" Url="https://www.ortax.org/ortax/?mod=kursbi">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,2253" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,2678" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Image" Name="imgKursBI" />
               <Variable x:TypeArguments="ui:Image" Name="imgKursPajak" />
@@ -91,47 +97,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MoveWindow Window="{x:Null}" DisplayName="Move Window" Height="1300" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="MoveWindow_1" Width="770" X="100" Y="0" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,221" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Restore'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5f322d26-eb5f-4478-a3f3-cb2a6bdd8358" InformativeScreenshot="58cdfd109cfff77163d89306e5bcee45" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Kurs Bank Indonesia | Ortax - your center of excellence in taxat*' /&gt;&lt;ctrl name='Kurs Bank Indonesia | Ortax - your center of excellence in taxat*' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Restore' role='push button' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:Click>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:UiElementExists DisplayName="Element Exists 'H2'" Exists="[pageKursBI]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:MoveWindow Window="{x:Null}" DisplayName="Resize Chrome to Fit Screenshoot" Height="1300" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="MoveWindow_1" Width="770" X="100" Y="0" />
+            <ui:UiElementExists DisplayName="Find element to check page loaded" Exists="[pageKursBI]" sap:VirtualizedContainerService.HintSize="510,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76f202bf-63ce-4751-90af-8ed4804909a1" InformativeScreenshot="b42b3fa17657ba62672130d0545d1bf8" Selector="&lt;webctrl tag='H2' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -143,7 +110,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[pageKursBI]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[pageKursBI]" DisplayName="If Page Loaded" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -154,7 +121,7 @@
                 <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
               </If.Else>
             </If>
-            <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[imgKursBI]">
+            <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot Kurs BI" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[imgKursBI]">
               <ui:TakeScreenshot.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22bf1768-3716-411f-817a-47da76047cd1" InformativeScreenshot="66a7a60b8b2c4ab0e1e42f4ef861574b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Kurs Bank Indonesia | Ortax - your center of excellence in taxat*' /&gt;&lt;ctrl name='Kurs Bank Indonesia | Ortax - your center of excellence in taxat*' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl role='pane' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -169,8 +136,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TakeScreenshot>
-            <ui:SaveImage DisplayName="Save Image" FileName="D:\temp word\temp.png" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[imgKursBI]" />
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="D:\temp word\KURS BI.docx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="D:\temp word\KURS BI Template.docx">
+            <ui:SaveImage DisplayName="Save Image KURS BI" FileName="D:\temp word\temp.png" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[imgKursBI]" />
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="D:\temp word\KURS BI.docx" DisplayName="Copy Template Kurs BI" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="D:\temp word\KURS BI Template.docx">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -178,13 +145,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CopyFile>
-            <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="D:\temp word\KURS BI.docx" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+            <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="D:\temp word\KURS BI.docx" sap:VirtualizedContainerService.HintSize="510,751" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
               <p:WordApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WordDocument">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,774" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,642" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -194,19 +161,18 @@
                     <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[System.DateTime.Now.ToString(&quot;dd-MMMM-yyyy&quot;)]" ReplaceAll="True" Search="&lt;date&gt;" />
                     <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[&quot;D:\temp word\Kurs BI &quot; + System.DateTime.Now.ToString(&quot;dd-MMMM-yyyy&quot;) + &quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
                     <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                    <ui:SaveImage DisplayName="Save Image" FileName="D:\temp word\temp.png" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[imgKursBI]" />
                   </Sequence>
                 </ActivityAction>
               </p:WordApplicationScope.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p:WordApplicationScope>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://www.ortax.org/ortax/?mod=kurs" />
-            <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[pageKursPajak]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To Ortax Kurs Pajak" sap:VirtualizedContainerService.HintSize="510,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://www.ortax.org/ortax/?mod=kurs" />
+            <ui:UiElementExists DisplayName="Find element for Page loaded" Exists="[pageKursPajak]" sap:VirtualizedContainerService.HintSize="510,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd13588e-5430-4bdb-ad9c-dbcb54208758" InformativeScreenshot="4bc795565e7a350573e2027e4759b51d" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -218,12 +184,18 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[pageKursPajak]" sap:VirtualizedContainerService.HintSize="484,217" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[pageKursPajak]" DisplayName="If Page Loaded" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Else>
                 <Delay Duration="00:05:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
               </If.Else>
             </If>
-            <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[imgKursPajak]">
+            <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot Kurs Pajak" sap:VirtualizedContainerService.HintSize="510,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[imgKursPajak]">
               <ui:TakeScreenshot.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22bf1768-3716-411f-817a-47da76047cd1" InformativeScreenshot="bb21685c3484f36031d80f9dd8b78200" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Kurs Menteri Keuangan | Ortax - your center of excellence in tax*' /&gt;&lt;ctrl name='Kurs Menteri Keuangan | Ortax - your center of excellence in tax*' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl role='pane' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -232,8 +204,8 @@
                 </ui:Target>
               </ui:TakeScreenshot.Target>
             </ui:TakeScreenshot>
-            <ui:SaveImage DisplayName="Save Image" FileName="D:\temp word\temp.png" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[imgKursPajak]" />
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="D:\temp word\KURS Pajak.docx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="D:\temp word\KURS Pajak Template.docx">
+            <ui:SaveImage DisplayName="Save Image Kurs Pajak" FileName="D:\temp word\temp.png" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[imgKursPajak]" />
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="D:\temp word\KURS Pajak.docx" DisplayName="Copy Template Kurs Pajak" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="D:\temp word\KURS Pajak Template.docx">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,7 +213,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CopyFile>
-            <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="D:\temp word\KURS Pajak.docx" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
+            <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="D:\temp word\KURS Pajak.docx" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
               <p:WordApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WordDocument">
                   <ActivityAction.Argument>
@@ -266,7 +238,12 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p:WordApplicationScope>
-            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="510,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke EntryKurs workflow" sap:VirtualizedContainerService.HintSize="510,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="EntryKurs.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
@@ -277,5 +254,29 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
+    <Assign sap:VirtualizedContainerService.HintSize="586,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[tgl]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("dd")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="586,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[bulan]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("MM")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="586,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[tahun]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("yyyy")]</InArgument>
+      </Assign.Value>
+    </Assign>
   </Sequence>
 </Activity>

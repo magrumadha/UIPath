@@ -2,22 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "BalaReva.EasyExcel.Activities/29.0.0": {
-        "type": "package",
-        "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.Office.Interop.Excel": "15.0.4795.1000",
-          "MicrosoftOfficeCore": "15.0.0"
-        },
-        "compile": {
-          "lib/_._": {}
-        },
-        "runtime": {
-          "lib/BalaReva.EasyExcel.Design.dll": {},
-          "lib/BalaReva.EasyExcel.Utilities.dll": {},
-          "lib/BalaReva.EasyExcel.dll": {}
-        }
-      },
       "ClosedXML/0.87.1": {
         "type": "package",
         "dependencies": {
@@ -535,15 +519,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
-        "type": "package",
-        "compile": {
-          "lib/net20/_._": {}
-        },
-        "runtime": {
-          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
-        }
-      },
       "Microsoft.Rest.ClientRuntime/2.3.21": {
         "type": "package",
         "dependencies": {
@@ -583,15 +558,6 @@
         },
         "runtime": {
           "lib/net46/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MicrosoftOfficeCore/15.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net35/_._": {}
-        },
-        "runtime": {
-          "lib/net35/Office.dll": {}
         }
       },
       "MimeKit/2.10.0": {
@@ -2562,22 +2528,6 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win7-x86": {
-      "BalaReva.EasyExcel.Activities/29.0.0": {
-        "type": "package",
-        "dependencies": {
-          "DocumentFormat.OpenXml": "2.5.0",
-          "Microsoft.Office.Interop.Excel": "15.0.4795.1000",
-          "MicrosoftOfficeCore": "15.0.0"
-        },
-        "compile": {
-          "lib/_._": {}
-        },
-        "runtime": {
-          "lib/BalaReva.EasyExcel.Design.dll": {},
-          "lib/BalaReva.EasyExcel.Utilities.dll": {},
-          "lib/BalaReva.EasyExcel.dll": {}
-        }
-      },
       "ClosedXML/0.87.1": {
         "type": "package",
         "dependencies": {
@@ -3095,15 +3045,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
-        "type": "package",
-        "compile": {
-          "lib/net20/_._": {}
-        },
-        "runtime": {
-          "lib/net20/Microsoft.Office.Interop.Excel.dll": {}
-        }
-      },
       "Microsoft.Rest.ClientRuntime/2.3.21": {
         "type": "package",
         "dependencies": {
@@ -3143,15 +3084,6 @@
         },
         "runtime": {
           "lib/net46/Microsoft.Win32.Primitives.dll": {}
-        }
-      },
-      "MicrosoftOfficeCore/15.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net35/_._": {}
-        },
-        "runtime": {
-          "lib/net35/Office.dll": {}
         }
       },
       "MimeKit/2.10.0": {
@@ -5053,19 +4985,6 @@
     }
   },
   "libraries": {
-    "BalaReva.EasyExcel.Activities/29.0.0": {
-      "sha512": "x1fdjCkgtxhBMKg3ZCzPiDQaSQpPtiHMi5okIYVl21FlpZ2DMRpDHphR4nxM5ugcNM6FttEoLCjAkKsDovKqyQ==",
-      "type": "package",
-      "path": "balareva.easyexcel.activities/29.0.0",
-      "files": [
-        ".nupkg.metadata",
-        "balareva.easyexcel.activities.29.0.0.nupkg.sha512",
-        "balareva.easyexcel.activities.nuspec",
-        "lib/BalaReva.EasyExcel.Design.dll",
-        "lib/BalaReva.EasyExcel.Utilities.dll",
-        "lib/BalaReva.EasyExcel.dll"
-      ]
-    },
     "ClosedXML/0.87.1": {
       "sha512": "2LC0T8bu2G2kt34C4Ig87uZfrRO4MwMVI54e2To7m3DvwAs2Z2Ir86WQuUoW8Txo1uNGSfmu3DpfpQhSX0bIww==",
       "type": "package",
@@ -5831,18 +5750,6 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Office.Interop.Excel/15.0.4795.1000": {
-      "sha512": "DfceS96ustwfL8EOJNNRtpk6b0RylhjNpgeeemuvi9X4GYks2UTeAimjSrdFEfuqRo5ibZ4Sd0gJIeDr9gMa6Q==",
-      "type": "package",
-      "path": "microsoft.office.interop.excel/15.0.4795.1000",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/Microsoft.Office.Interop.Excel.dll",
-        "microsoft.office.interop.excel.15.0.4795.1000.nupkg.sha512",
-        "microsoft.office.interop.excel.nuspec"
-      ]
-    },
     "Microsoft.Rest.ClientRuntime/2.3.21": {
       "sha512": "KDYlgTyO693V6pi6SGk9eg+dDvKjuOgmkapbHdpnB1SmTPKpvWxVLIMyARJsCFLfB6axyURUJHOfvxBQ0yJKeg==",
       "type": "package",
@@ -5915,18 +5822,6 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
-      ]
-    },
-    "MicrosoftOfficeCore/15.0.0": {
-      "sha512": "/KgYw8uvv0Ut8FPvyEa1XJ/TrLSRgvTv3JgC2IT0/8NwoICzbEJWfmfwsE6Dwi8WH0jVkTEO7zRvGvaKqUOhqQ==",
-      "type": "package",
-      "path": "microsoftofficecore/15.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35/Office.dll",
-        "microsoftofficecore.15.0.0.nupkg.sha512",
-        "microsoftofficecore.nuspec"
       ]
     },
     "MimeKit/2.10.0": {
@@ -9994,7 +9889,6 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
-      "BalaReva.EasyExcel.Activities >= 29.0.0 <= 29.0.0",
       "UiPath.Credentials.Activities >= 2.0.0 <= 2.0.0",
       "UiPath.Excel.Activities >= 2.10.4 <= 2.10.4",
       "UiPath.Mail.Activities >= 1.10.5 <= 1.10.5",
@@ -10008,20 +9902,15 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "BlankProcess",
-      "projectName": "BlankProcess",
-      "projectPath": "D:\\UIPath\\UI Path Academy\\BlankProcess\\.local",
+      "projectUniqueName": "Kurs v1",
+      "projectName": "Kurs v1",
+      "projectPath": "D:\\UIPath\\Project\\Kurs V2\\.local",
       "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
-      "outputPath": "D:\\UIPath\\UI Path Academy\\BlankProcess\\.local"
+      "outputPath": "D:\\UIPath\\Project\\Kurs V2\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
-          "BalaReva.EasyExcel.Activities": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[29.0.0, 29.0.0]"
-          },
           "UiPath.Credentials.Activities": {
             "include": "Runtime",
             "target": "Package",
