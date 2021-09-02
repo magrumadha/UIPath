@@ -1,6 +1,6 @@
 {
-  "name": "Kurs v1",
-  "description": "Kurs v1",
+  "name": "Kurs v2",
+  "description": "Kurs v2",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[2.0.0]",

@@ -1,0 +1,214 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1266,4346.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ucat="clr-namespace:UiPath.Core.Activities.TextModifications;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="548,4282" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Practice - Working With Data.xlsx&quot;,autoSave:=True,readOnly:=False,isWorkspace:=False)]" Name="PracticeFile" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Sheet 1 - Numbers challenge" sap:VirtualizedContainerService.HintSize="506,1104" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="466,986.666666666667" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[PracticeFile.Sheet(&quot;Numbers&quot;).Range(&quot;B7:D10&quot;)]" SaveAfterEachRow="False">
+        <ueab:ExcelForEachRow.Body>
+          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,794" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:WriteCellX Cell="[Notes.Sheet(&quot;Number&quot;).Cell(&quot;Number_Input&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[CurrentRow.ByField(&quot;Number&quot;)]" />
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="412,498" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[CurrentRow.ByField(&quot;Final Number&quot;).StringValue]" SourceText="[Notes.Sheet(&quot;Number&quot;).Cell(&quot;TwoDecimals&quot;)]">
+                <ui:ModifyText.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="382,152" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" ReplaceText="," SearchText="." />
+                      <ucat:CombineTextModification DisplayName="Combine text" sap:VirtualizedContainerService.HintSize="382,134" sap2010:WorkflowViewState.IdRef="CombineTextModification_1" NewText="[CurrentRow.ByField(&quot;Currency Symbol&quot;)]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ModifyText.Body>
+              </ui:ModifyText>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelForEachRow.Body>
+      </ueab:ExcelForEachRow>
+    </Sequence>
+    <Sequence DisplayName="File Names Challenge" sap:VirtualizedContainerService.HintSize="506,1061.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="466,944" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_2" Range="[PracticeFile.Sheet(&quot;FileNames&quot;).Range(&quot;B7:C10&quot;)]" SaveAfterEachRow="False">
+        <ueab:ExcelForEachRow.Body>
+          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,751.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:WriteCellX Cell="[Notes.Sheet(&quot;File&quot;).Cell(&quot;FullFileName_Input&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[CurrentRow.ByField(&quot;Full File Name&quot;)]" />
+              <ui:TextToLeftRight DisplayName="Text to Left/Right" FullText="[Notes.Sheet(&quot;File&quot;).Cell(&quot;FileName&quot;)]" sap:VirtualizedContainerService.HintSize="412,249.333333333333" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="_" TextToLeft="[Saved.Values(Of String)(&quot;FileName&quot;)]" TextToRight="[Saved.Values(Of String)(&quot;FileName_TextLeft&quot;)]" />
+              <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;Final File Name&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[string.Format(&quot;{0}_{1}.{2}&quot;, Notes.Sheet(&quot;Date&quot;).Cell(&quot;YYYYMMDD&quot;), Saved.Values(Of String)(&quot;FileName&quot;), Notes.Sheet(&quot;File&quot;).Cell(&quot;FileExtension&quot;))]" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelForEachRow.Body>
+      </ueab:ExcelForEachRow>
+    </Sequence>
+    <Sequence DisplayName="Group" sap:VirtualizedContainerService.HintSize="506,1946.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="466,1829.33333333333" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_3" Range="[PracticeFile.Sheet(&quot;Text&quot;).Range(&quot;B8:D11&quot;)]" SaveAfterEachRow="False">
+        <ueab:ExcelForEachRow.Body>
+          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1636.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="412,935.333333333333" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[Saved.Values(Of String)(&quot;ModifiedQuote&quot;)]" SourceText="[CurrentRow.ByField(&quot;Input&quot;)]">
+                <ui:ModifyText.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="382,152" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_2" ReplaceText="[string.Format(&quot;&quot;&quot;&quot;)]" SearchText="{}{" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="382,152" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_3" ReplaceText="[string.Format(&quot;&quot;&quot;&quot;)]" SearchText="}" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="382,152" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_4" ReplaceText=" " SearchText="_" />
+                      <ucat:FindAndReplaceTextModification sap2010:Annotation.AnnotationText="We are using this Find and Replace modification to replace double spaces with single spaces. The Trim modification won't work in this case, as it would only look for spaces at the begining or at the end of our text.&#xD;&#xA;" DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="382,247.333333333333" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_5" ReplaceText=" " SearchText="  ">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ucat:FindAndReplaceTextModification>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ModifyText.Body>
+              </ui:ModifyText>
+              <ui:TextToLeftRight DisplayName="Text to Left/Right" FullText="[Saved.Values(Of String)(&quot;ModifiedQuote&quot;)]" sap:VirtualizedContainerService.HintSize="412,249.333333333333" sap2010:WorkflowViewState.IdRef="TextToLeftRight_2" Separator="-" TextToLeft="[CurrentRow.ByField(&quot;Quote&quot;).StringValue]" TextToRight="[CurrentRow.ByField(&quot;Author&quot;).StringValue]" />
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="412,282" sap2010:WorkflowViewState.IdRef="ModifyText_3" OutputText="[CurrentRow.ByField(&quot;Quote&quot;).StringValue]" SourceText="[CurrentRow.ByField(&quot;Quote&quot;)]">
+                <ui:ModifyText.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ucat:ToUpperLowerTextModification DisplayName="Text to Upper/Lowercase" sap:VirtualizedContainerService.HintSize="382,80" sap2010:WorkflowViewState.IdRef="ToUpperLowerTextModification_1" ModificationType="Lowercase" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ModifyText.Body>
+              </ui:ModifyText>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelForEachRow.Body>
+      </ueab:ExcelForEachRow>
+    </Sequence>
+  </ueab:SequenceX>
+</Activity>

@@ -9902,8 +9902,8 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "Kurs v1",
-      "projectName": "Kurs v1",
+      "projectUniqueName": "Kurs v2",
+      "projectName": "Kurs v2",
       "projectPath": "D:\\UIPath\\Project\\Kurs V2\\.local",
       "packagesPath": "C:\\Users\\6760\\.nuget\\packages\\",
       "outputPath": "D:\\UIPath\\Project\\Kurs V2\\.local"

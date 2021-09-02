@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,2754" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,3813" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="26">
+    <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -27,10 +27,11 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,9 +56,17 @@
       <AssemblyReference>UiPath.Presentations</AssemblyReference>
       <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="562,2689" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="562,3748" sap2010:WorkflowViewState.IdRef="SequenceX_1">
     <ueab:SequenceX.Variables>
       <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
       <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
@@ -83,7 +92,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="748, 422, 438, 31" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAjCAYAAADi6c+6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVHhe7dUxDQAwDMCwUSl/kN0zDURkX2GQswAQZnQApBkdAGlGB0Ca0QGQZnQApBkdAGlGB0Ca0QGQZnQApP3RzcwrAOgwOgDSjA6ANKMDIM3oAEgzOgDSjA6ANKMDIM3oAEgzOgDSjA6ANKMDIM3oAEgzOgDSjA6ANKMDIO2PDgCKjA6ANKMDIM3oAEgzOgDSjA6ANKMDIM3oAEgzOgDCdi/t1Kq5olWPJwAAAABJRU5ErkJggg==" InformativeScreenshot="e6bd6b9b64c62dc77ba671f8162f284a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="841, 485, 115, 32" ElementType="Button" FriendlyName="'Google Search'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnK' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnK' tag='INPUT' type='submit' aaname='Google Search' check:text='Google Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAkCAYAAACzI6XTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ6SURBVHhe7ZtNbsIwEIV7sC4q9TRI7LgGC7hGJcQxWCBxCBacoT9CbuzJc8b2JA0hIHk6T3qLZBxnPJ/HyiYvzqRWBlexErjX69V9ff+4z69vc2X23Dw/rgjXB6SHzHWZA45wrWN12HOEIlxpoLlOQwZXoSGDq9CQwVVoyOAqNGRwFRoyuAoNzQ/3sHGvb+/MG3eSxs3ms9sv3t3q4yzE/nCe62LnLtK4B/m0bt65PoqxewzNCvfysWyKtHT78/C9eT0RbgAr5PpEwPXAPe/cqtn920Meu6OzRnna/DLIo9s+dCOmrgbuLbs+LApHYba4/hhBpNjSbdd4Xw7XA+rmKDdba6FzSw/M1W5mxGKu4f6myS99RloXwd0l65pjY0GzwR27C9NNQMUDmFtjJdwMdCh0f8GSghffBkNzUSzC5rEWenyucZp7Ny+9v8svXMdx0w09Dm67yFi8AgSN6xY+Qyy8M4Xk8+LPyWYdiuLeMhc/BTjoEC9zh/OapZtguqGnHMtdjIrIj7f7Y6x4xZd66xEnCpneM2auAAb3FssOaAG3zB2uBi46VVqECOIRMaHbZNMzZa4j58oB8us8JuQO1wO3cUguWVhjdECbdLoA1ikTYnTNi5cXMp2Duz9X3BuYKwDsNgd1cR/cPPcOalVwg9uFxyOLFQGmYrRmixuOUbEptnH7WAgZQt/8iYujN+/U/rl4ntsDjQvrFODm4wGwPrhPcijEELh/bKgauH6XjzluzTV2bn7cW9f2Gqr2WDb3GzK4Cg0ZXIWGDK5CQwZXoSGDq9BQhGu/k+iw+DuJ/Qimw+KPYF4+YB1cpz03DtYrgWvSJYOrVs79AuQkmY6Fq+OhAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -94,7 +103,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="841, 485, 115, 32" ElementType="Button" FriendlyName="'Google Search'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnK' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnK' tag='INPUT' type='submit' aaname='Google Search' check:text='Google Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHcAAAAkCAYAAACzI6XTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ6SURBVHhe7ZtNbsIwEIV7sC4q9TRI7LgGC7hGJcQxWCBxCBacoT9CbuzJc8b2JA0hIHk6T3qLZBxnPJ/HyiYvzqRWBlexErjX69V9ff+4z69vc2X23Dw/rgjXB6SHzHWZA45wrWN12HOEIlxpoLlOQwZXoSGDq9CQwVVoyOAqNGRwFRoyuAoNzQ/3sHGvb+/MG3eSxs3ms9sv3t3q4yzE/nCe62LnLtK4B/m0bt65PoqxewzNCvfysWyKtHT78/C9eT0RbgAr5PpEwPXAPe/cqtn920Meu6OzRnna/DLIo9s+dCOmrgbuLbs+LApHYba4/hhBpNjSbdd4Xw7XA+rmKDdba6FzSw/M1W5mxGKu4f6myS99RloXwd0l65pjY0GzwR27C9NNQMUDmFtjJdwMdCh0f8GSghffBkNzUSzC5rEWenyucZp7Ny+9v8svXMdx0w09Dm67yFi8AgSN6xY+Qyy8M4Xk8+LPyWYdiuLeMhc/BTjoEC9zh/OapZtguqGnHMtdjIrIj7f7Y6x4xZd66xEnCpneM2auAAb3FssOaAG3zB2uBi46VVqECOIRMaHbZNMzZa4j58oB8us8JuQO1wO3cUguWVhjdECbdLoA1ikTYnTNi5cXMp2Duz9X3BuYKwDsNgd1cR/cPPcOalVwg9uFxyOLFQGmYrRmixuOUbEptnH7WAgZQt/8iYujN+/U/rl4ntsDjQvrFODm4wGwPrhPcijEELh/bKgauH6XjzluzTV2bn7cW9f2Gqr2WDb3GzK4Cg0ZXIWGDK5CQwZXoSGDq9BQhGu/k+iw+DuJ/Qimw+KPYF4+YB1cpz03DtYrgWvSJYOrVs79AuQkmY6Fq+OhAAAAAElFTkSuQmCC" InformativeScreenshot="1c95b539a0d61f650baeafad7b0852c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="967, 485, 128, 32" ElementType="Button" FriendlyName="'I'm Feeling Lucky'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnI' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;center&amp;gt;input' name='btnI' tag='INPUT' type='submit' aaname='I&amp;apos;m Feeling Lucky' check:text='I&amp;apos;m Feeling Lucky' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAkCAYAAABIWJJJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKmSURBVHhe7ZtBbuowEIbfwbp4Uk+DxI5rsIBrICGOwaISh2DRM7R9Qn6esX/HHpwQktCK5v+lT0rweDJx/kzCIn8cRWWiIahChSEul4v7/PrnPj6/yAyQay3XPFcyhAzUJpHfT26KZAh2hvki1x5KhqgFkvkA0RBEgWgIokA0BFEgGoIoEA1BFIiGIAo0kSHO7rB4davd2W+/ue3fV7c91uJ6ct67lc/xcsXSHc6V+J6c1j7H+s1v5/XWY+9Gax5XX8HU+W4APcgQI0/kQYtBQ7QDPcAQsr1xp2pcTx5uiPr4KGiInJY77rjxbX7jDrtlavvyKNELk+0Xc4Qei/Ge5XxZ7N17j7F6h4jb640/Zpzja24MHcbD70u3Xfvc5nhKV81xHVJOG6v7zTH0dxMT1sznkFzF8SfoyB7oGwzR/I4LBRPoSbYuLhaoIZnHLHBx53eMdRmimRP34xytOdUY3o+mNYR550JsFlOcnzWAxNfquRPoWzpEWgizXy52RtfiemSBimNpfMh7a6zNEPmcelwYG1RzlyHsmIlZZeYE+Tlene9AoCc0RDiW7R6h1XaNDTGEuXs9UxuiO5+vY+FNYfNKPp0jtbcc806g39Eh7hh7tg4hMdfHjI+No4+p1TIA6CkNUc2D/Y6x+w1haxz4DqFjTacJNSHWdCHkOeX5WmqUWmKdY4Ge0xCesKhxUUxs29gQQ2A85Ir/mFprRlxGzJMuoGe125cvhmaumsOuga6d3S8fZ2OAJjLEfFCzTXRXjkINk91sI4FoiBvInd10j9DerzrhDzC1MSEa4hb2UfDj3QGPsOm6gwDREESBaAiiQDQEUSAagigQDUEUiIYgCpQMwU/55kv1Uz5+7Dtfqh/7imSAnWI+yLXOzSAqDEFRNASVybn/pmSYGrXJNQQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -105,7 +114,7 @@
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=eur+to+usd&amp;sxsrf=ALeKk03D_1qdUgyeI2zLw29YtZ_T7sfMXQ%3A1629886562528&amp;source=hp&amp;ei=YhgmYYHDHd-Tr7wPuMepuAw&amp;iflsig=AINFCbYAAAAAYSYmck3PBNEbwTxVWzaXspwf4-KGi-3-&amp;oq=eur+&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADIJCCMQJxBGEIICMgsIABCABBCxAxCDATIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzIECAAQQzoECCMQJzoQCAAQgAQQhwIQsQMQgwEQFDoHCAAQsQMQQ1D3zgNYwdcDYNHoA2gAcAB4AIABlAKIAdQGkgEFMC4zLjGYAQCgAQE&amp;sclient=gws-wiz" DesignTimeRectangle="170, 280, 63, 36" ElementType="Text" FriendlyName="'1.17'" FullSelectorArgument="&lt;webctrl aaname='1.17' parentid='knowledge-currency__updatable-data-column' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='knowledge-currency__updatable-data-column' tag='SPAN' type='' /&gt;" InformativeScreenshot="71e824bb94a3f1c09b8b5099bda3fbce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eur to usd - Google Search' /&gt;" SearchSteps="FuzzySelector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="170, 247, 286, 22" FriendlyName="'1 Euro equals'" FullSelectorArgument="&lt;webctrl aaname='  equals' parentid='knowledge-currency__updatable-data-column' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='  equals' parentid='knowledge-currency__updatable-data-column' tag='DIV' type='' check:text='1 Euro equals' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASIAAAAaCAYAAAAT4FHCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIrSURBVHhe7dpLbuowFIDhLpkJk26AAQN2wASxCRiwBgSLADbhOn4Q+/gkJAVkRP5PyiDYzqNS/pvS+2MAoDJCBKA6QgSgOkIEoDpCBKA6QgSgOkIEoDpCBKC6jhDdzG75a9ansKvyc2Zzfetf+10u+5WZLQ/mEvYBjKOEqA3MkBBNKThdCBHwnCxE7oFq3mg2W7N+VYiuB7OYr8zuGvat46Y5x9nvNOP2Id41n7lzh89P2/vb1UysV2Xzy+ty5wxji/05u/YyJOfi/tP1bovXacn1+dytOYbPAehEiA7hoSkfxNILQ2TPtdjf/H7DRSVZI/clN5488OKcPrDteAzF0BC5+el4iJ62Xh6rPDYAqeM7ouEhav/lT7fuKDTKEKXj/rhZmKxsTUYPoguAm68cL8RvaIhK+XhfiAA89nSI+udYo0Okn7sNi+Tnq0F087Xj5dc+NERuXnJ8fX16Pfl9A9B9TYi6r0MbHxeiNkDxTU8ZL96C/DnydQA0Hxgif9yxv5rJ+S1t/FFI0nHtPoeEKBryswSm7f0hCse6h8CFpy9E1r++rO6Jmfgy20UtvT+xPr4B+XEZMr+frk9DVERJnBtA6U1fVtstfXtxD2P43D6kx+Zh7QtRI13TF6EgxiNu8g0pG1f+e0KMk1+b/3n/Hs+wrU/h3sM95PGRP5fH1w5MXUeIvh2/LgGfhBABqI4QAahuoiEC8EkIEYDqCBGA6ggRgOoIEYDKjPkDSIXR/2Lmkt4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -122,25 +131,25 @@
         <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXpSURBVFhH1ZZvVFNlHMdvvvJlKoiYpmm9qHd1ynMGg93BgE02/rPJAJkYZacXmXVK046cOscwQ8FMqyVjgJZGLTXziHlESZDBIFOTjbGNbTQHnQyGHhPw1/PcPZc9u2xi9qZ+53zOHZd7n8/3+T33uRvzvymorJzjLJCzriLVXpda2ebSZNpdGlXAoVYGXIWKfvS/C4hap0oqwdeS2/59OXXsXHdJzrsubdbwQG4aTJMjC5KdwmHPkoJdFcRZkOFHobbie8kwD1euYpUWzdg7kJ8BHHnpQWaESA0LYFeyCAk48tI8zmxWQ4Z78AKAR1wludUO9WpwFCgQ8lAAYReQfEYXSAB7ZjJCgu5L24nHJMPfv/CFA0U5Jk5eiOWKoDxaB2YLsDqIIzvt6wcK8YtavrsPDc7JSYCwDtABsJwKESYXBOhXiMGZK6simshVv0GVfwndeDVXBrb89HB51CWgZh9xCUIBMI5McSHRhddyg25uVk3Z0Gm5GLrRANez0MBIGDXA9MzJAyiU0x1QJAUDyBNhQCVxR9wdTx15ZdvKQy/BpleV0KZIhstoQCvqhFBsRzi3bwbvsWYY7rUEblg7A15z82178xs3r9eIblg/Fvms+0Q++75E3+CBhCGPXuT16kUef53YM2JMdP/RkOAeMYq3E22wKqFyzpNfbhhecagCVu0vg0ZFAnSi1NdQF+xYTujXqcF37gyMjo6C1T0GpyxB8Gd8bsTWAl6TEoaaE8BnSoSb34vh1plkuHMuGSbPI9oQF5Ng6qLUD8hJ9Kj9hyskTzRVAI9ucy6cTE8EC9pCfXgp8MzXqeGm1wP93lF4sykAqo/Gp1HuGodNDQGweUbhz989MN6WD/faU2CqIwXuXUoBMKcCdKGjBR050OduVkz0DLPyq5drljWuh+VNL3I8bVgPNXkS+DFDBJdVLNjQevtbz0I/EqhrQ2I6QCYir2acCzHmPYsk6QA9mDSCLAgf4OeMaqJnmBWHKy7gADSqHRo4LhNBW4YYbNvf4lqMZ55VHS7HYszqD4O8jjqBr71zbYsgAAmB5Zhe2TmiZ5jHG8v7hQEw28rT4bRsFbiPf8OtMy3Gs+ZnTgdQ7ByHPnTt+OC34fLp9pMO9KRaiZ5hljWtD0QKkFhbDCbZC+Azd3AP22xyPsDJrjEYG2oPD0C3nwuQEiB61AEUAHUBaJY2rOOo2JQJQ53tcKp77L5iHnnEAIL155COET3DLG0qt/HCJeTI84y+DK6cCC7BbDPH4AB9g2gJXKbwANNiQk9KaAmWNpafx2IaOtD7De9xDxbearSUFvPyjUbyEP66lZo1PXOMFP2PDT2EqAN7HjPqICr1ZVMdzis+vMXy9oQH4ENgec5utA3do3DdYRmGngxBgLD2w5SF3UX0DBNfX5YslC42lnHwn587uhEGR37j9jneavSs+ZljufOGF4bMpZPRxEFY9B6QhV5E+FW82KjzxyMRDx+APvfskdfghK2DazHeavhhw+A1x+eOXf0Jak9UoJmjdZ8h5wOwMNUteBXjijfq3sGSRfVrOWgxfz6uvhRQt6C0pRqMV85Aq7OXo+FyC5SYqmDJXg3cNsuRRCjm5XwA9m2iDRX+Oo43rvXwAbAMI/ybZyEh1lACCw9oIXbvGjD9kE2te6QASN7FusGpi/xjNba+RC0U0YRJyTHGUAwxn2jg+c80MNmjEEhDYp7JLraA6CLXorq1VbyIBstoMc8CvRZi9mugt1WJBMJ1D7UdM2GW7iCa6IV/OMbVaY/SEhpuxoQFdQh9EWgb0devRfiy4eXBAHfN0iP/6JdxnKH0g9i6cCENJ0fM/1QD/na69bRYCve60cy7pTseWE7XfIO2MPag1s3LOGGddpp5B4ug6lguEvFtp+Vo1p0S96xrPlvh3bHgi+ItMXqtH0vpEHF6DdzqUkyEi6Uw0Snx/3WJ3Rz1aX+Ywi+refo1STEGbXXMwaLWRz/XWL9ryfbc7WQDaH2td81sK2p19YQlNWnGS+a/WwzzN8pWpGcXa7w4AAAAAElFTkSuQmCC" InformativeScreenshot="68d09a4800cc771034df1193ae206d50.png" Selector="&lt;html app='chrome.exe' title='Google'/&gt;" Url="https://www.google.com/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,1611" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Contract for Sale of Goods - Mook Data.xlsx">
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2670" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Contract for Sale of Goods - Mook Data.xlsx">
       <ueab:ExcelApplicationCard.Body>
         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,1340" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2399" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordApplicationScope DisplayName="Use Word File" FilePath="Contract for Sale of Goods.docx" sap:VirtualizedContainerService.HintSize="466,1250" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+            <p:WordApplicationScope DisplayName="Use Word File" FilePath="Contract for Sale of Goods.docx" sap:VirtualizedContainerService.HintSize="466,2309" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
               <p:WordApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WordDocument">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1081" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,2140" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,7 +159,12 @@
                     <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[Excel.Sheet(&quot;Contract Data&quot;).Cell(&quot;C2&quot;)]" ReplaceAll="True" Search="%[COMPANY ADDRESS]" />
                     <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Excel.Sheet(&quot;Contract Data&quot;).Cell(&quot;D2&quot;)]" ReplaceAll="True" Search="%[SELLER NAME]" />
                     <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[Excel.Sheet(&quot;Contract Data&quot;).Cell(&quot;E2&quot;)]" ReplaceAll="True" Search="%[SELLER ADDRESS]" />
-                    <p:WordInsertDataTable Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" Text="{x:Null}" DataTable="[&lt;Insert Table here&gt;]" DisplayName="Insert DataTable in Document" sap:VirtualizedContainerService.HintSize="412,187" sap2010:WorkflowViewState.IdRef="WordInsertDataTable_1" InsertRelativeTo="Document" />
+                    <p:WordInsertDataTable Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" DataTable="[Excel.Table(&quot;Table1&quot;)]" DisplayName="Insert DataTable in Document" sap:VirtualizedContainerService.HintSize="412,291" sap2010:WorkflowViewState.IdRef="WordInsertDataTable_1" InsertRelativeTo="Text" Position="Replace" Text="&lt;Insert Table here&gt;" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[Excel.Sheet(&quot;Goods&quot;).Cell(&quot;E11&quot;)]" ReplaceAll="True" Search="%[TOTAL]" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;eurusd&quot;)]" ReplaceAll="True" Search="%[EUR EXCHANGE RATE]" />
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[Excel.Sheet(&quot;Contract Data&quot;).Cell(&quot;A2&quot;)]" ReplaceAll="True" Search="%[DATE]" />
+                    <p:WordReplacePicture DisplayName="Replace Picture" sap:VirtualizedContainerService.HintSize="412,136" sap2010:WorkflowViewState.IdRef="WordReplacePicture_1" PictureAltText="Logo_Seller" PicturePath="Seller Logo.png" />
+                    <p:WordReplacePicture DisplayName="Replace Picture" sap:VirtualizedContainerService.HintSize="412,136" sap2010:WorkflowViewState.IdRef="WordReplacePicture_2" PictureAltText="Logo_Buyer" PicturePath="Buyer Logo.png" />
                   </Sequence>
                 </ActivityAction>
               </p:WordApplicationScope.Body>
