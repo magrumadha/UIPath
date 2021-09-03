@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1041,896" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1041,2901" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -27,6 +27,7 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -62,10 +63,14 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="508,831" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="508,2836" sap2010:WorkflowViewState.IdRef="SequenceX_1">
     <ueab:SequenceX.Variables>
       <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
       <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
@@ -76,23 +81,107 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\Final Presentation.pptx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="466,156" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="Input\Presentation Template.pptx" />
-    <ui:PowerPointApplicationScope Password="{x:Null}" CreateIfNotExists="True" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="466,545" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_1" PresentationPath="Output\Final Presentation.pptx" UseThemeFile="True">
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\Final Presentation.pptx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="466,156" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="Input\Presentation Template.pptx">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CopyFile>
+    <ui:PowerPointApplicationScope Password="{x:Null}" CreateIfNotExists="True" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="466,2550" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_1" PresentationPath="Output\Final Presentation.pptx">
       <ui:PowerPointApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,294" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,2299" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="412,204" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_1" MatchCase="True" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[MOCK_DATA.Sheet(&quot;MOCK_DATA&quot;).Cell(&quot;A2&quot;)]" SearchFor="&lt;PARTNER_NAME&gt;" WholeWordsOnly="False" />
+            <ueab:CopyChartToClipboardX FilePath="{x:Null}" Action="CopyToClipboard" Chart="[MOCK_DATA.Sheet(&quot;Charts&quot;).Chart(&quot;New Business/Upsell&quot;)]" DisplayName="Get Excel Chart" sap:VirtualizedContainerService.HintSize="412,88" sap2010:WorkflowViewState.IdRef="CopyChartToClipboardX_1" ReplaceFile="True" />
+            <ui:PasteIntoSlide Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Paste Item into Slide" sap:VirtualizedContainerService.HintSize="412,184" sap2010:WorkflowViewState.IdRef="PasteIntoSlide_1" Presentation="[PowerPoint]" ShapeName="New Business/Upsell Chart PH" SlideIndex="[1]" />
+            <ueab:CopyChartToClipboardX FilePath="{x:Null}" Action="CopyToClipboard" Chart="[MOCK_DATA.Sheet(&quot;Charts&quot;).Chart(&quot;Quarter Overview&quot;)]" DisplayName="Get Excel Chart" sap:VirtualizedContainerService.HintSize="412,88" sap2010:WorkflowViewState.IdRef="CopyChartToClipboardX_2" ReplaceFile="True" />
+            <ui:PasteIntoSlide Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Paste Item into Slide" sap:VirtualizedContainerService.HintSize="412,184" sap2010:WorkflowViewState.IdRef="PasteIntoSlide_2" Presentation="[PowerPoint]" ShapeName="Quarter Overview Chart PH" SlideIndex="[1]" />
+            <ueab:FilterX ClearFilter="False" ColumnName="Type" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="412,167" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[MOCK_DATA.Sheet(&quot;MOCK_DATA&quot;)]">
+              <ueab:FilterX.FilterArgument>
+                <ueabf:FilterArgument Mode="Basic">
+                  <ueabf:FilterArgument.AdvancedFiltersArgument>
+                    <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                      <ueabf:AdvancedFilterArgument.Condition1>
+                        <ueabf:AdvancedFilterCondition Operator="NONE">
+                          <ueabf:AdvancedFilterCondition.Value>
+                            <InArgument x:TypeArguments="x:String" />
+                          </ueabf:AdvancedFilterCondition.Value>
+                        </ueabf:AdvancedFilterCondition>
+                      </ueabf:AdvancedFilterArgument.Condition1>
+                      <ueabf:AdvancedFilterArgument.Condition2>
+                        <ueabf:AdvancedFilterCondition Operator="NONE">
+                          <ueabf:AdvancedFilterCondition.Value>
+                            <InArgument x:TypeArguments="x:String" />
+                          </ueabf:AdvancedFilterCondition.Value>
+                        </ueabf:AdvancedFilterCondition>
+                      </ueabf:AdvancedFilterArgument.Condition2>
+                    </ueabf:AdvancedFilterArgument>
+                  </ueabf:FilterArgument.AdvancedFiltersArgument>
+                  <ueabf:FilterArgument.BasicFiltersArgument>
+                    <ueabf:BasicFilterArgument>
+                      <ueabf:BasicFilterArgument.BasicFilters>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">New Business</InArgument>
+                        </scg:List>
+                      </ueabf:BasicFilterArgument.BasicFilters>
+                    </ueabf:BasicFilterArgument>
+                  </ueabf:FilterArgument.BasicFiltersArgument>
+                </ueabf:FilterArgument>
+              </ueab:FilterX.FilterArgument>
+            </ueab:FilterX>
+            <ui:ReplaceShapeWithDataTable AppendMode="CreateNewTable" DisplayName="Add Data Table to Slide" sap:VirtualizedContainerService.HintSize="412,303" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithDataTable_1" Presentation="[PowerPoint]" ShapeName="Table Placeholder" SlideIndex="[2]" StartColumn="1" StartRow="0" TableToInsert="[MOCK_DATA.Sheet(&quot;MOCK_DATA&quot;).Range(&quot;B:G&quot;)]" />
+            <ueab:FilterX ClearFilter="False" ColumnName="Type" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="412,167" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[MOCK_DATA.Sheet(&quot;MOCK_DATA&quot;)]">
+              <ueab:FilterX.FilterArgument>
+                <ueabf:FilterArgument Mode="Basic">
+                  <ueabf:FilterArgument.AdvancedFiltersArgument>
+                    <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                      <ueabf:AdvancedFilterArgument.Condition1>
+                        <ueabf:AdvancedFilterCondition Operator="NONE">
+                          <ueabf:AdvancedFilterCondition.Value>
+                            <InArgument x:TypeArguments="x:String" />
+                          </ueabf:AdvancedFilterCondition.Value>
+                        </ueabf:AdvancedFilterCondition>
+                      </ueabf:AdvancedFilterArgument.Condition1>
+                      <ueabf:AdvancedFilterArgument.Condition2>
+                        <ueabf:AdvancedFilterCondition Operator="NONE">
+                          <ueabf:AdvancedFilterCondition.Value>
+                            <InArgument x:TypeArguments="x:String" />
+                          </ueabf:AdvancedFilterCondition.Value>
+                        </ueabf:AdvancedFilterCondition>
+                      </ueabf:AdvancedFilterArgument.Condition2>
+                    </ueabf:AdvancedFilterArgument>
+                  </ueabf:FilterArgument.AdvancedFiltersArgument>
+                  <ueabf:FilterArgument.BasicFiltersArgument>
+                    <ueabf:BasicFilterArgument>
+                      <ueabf:BasicFilterArgument.BasicFilters>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">Upsell</InArgument>
+                        </scg:List>
+                      </ueabf:BasicFilterArgument.BasicFilters>
+                    </ueabf:BasicFilterArgument>
+                  </ueabf:FilterArgument.BasicFiltersArgument>
+                </ueabf:FilterArgument>
+              </ueab:FilterX.FilterArgument>
+            </ueab:FilterX>
+            <ui:ReplaceShapeWithDataTable AppendMode="CreateNewTable" DisplayName="Add Data Table to Slide" sap:VirtualizedContainerService.HintSize="412,303" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithDataTable_2" Presentation="[PowerPoint]" ShapeName="Table Placeholder" SlideIndex="[3]" StartColumn="1" StartRow="0" TableToInsert="[MOCK_DATA.Sheet(&quot;MOCK_DATA&quot;).Range(&quot;B:G&quot;)]" />
+            <ui:SavePresentationAsPdf DisplayName="Save Presentation as PDF" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="SavePresentationAsPdf_1" PdfPath="Output\Final Presentation.pdf" Presentation="[PowerPoint]" />
           </Sequence>
         </ActivityAction>
       </ui:PowerPointApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:PowerPointApplicationScope>
   </ueab:SequenceX>
 </Activity>

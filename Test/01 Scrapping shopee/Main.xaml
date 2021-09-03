@@ -1,0 +1,139 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1041,1503" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="29">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="454,1438" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="412,237" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Keyword" Title="Scrapping">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of UiPath.Excel.ExcelValue)("search")]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="412,946" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,725" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,225" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[Saved.Values(Of UiPath.Excel.ExcelValue)(&quot;search&quot;)]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.co.id/" DesignTimeRectangle="575, 132, 764, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="d643416885f14648a8d8fddccb20df67.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Shopee Indonesia | Jual Beli di Ponsel dan Online' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://shopee.co.id/" DesignTimeRectangle="1339, 132, 60, 34" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAmCAYAAAB0xJ2ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHBSURBVGhD7Zq/S8NAFMf9n/wHRGdHBzd/gIO7s/0H3HRwc1Jw0+JqCzoVu+ngIApuLV0UC9rcPe/7SGJjH5jh8izJO/jQknfh8v3kepdCFqjhzQSkn+SuL2iyvUKTtcV6EzIia9ZYgPeeJlsNCJ8RsiJzLsA5J3esMchsAkyACTABJsAEmABFARtL5M6PyT8/8uBo/v6OksN9uX+FqAtI9tbz4P6hT+7qlPEv6bEgAoKkc6tAV0AIxuE/3ilp7czU3ckBX4zvdWZqVaEqANMeTQqfUaZPTFQFYJpj2ku1adB8ty3WYqMqgMcId1iqTQNJZUTFQF9AWPCk2jRlZ0oMVAXwnQ2LoFTLCQslX0sJUTFQFeCOWjwYVnupDnz/lvsku6tiPTaqAgBmAY/1ey3AFtm/4Zp/fSrWKkRdAAftdXlQNDz4FJ4I0++ucymfHxl9ASnY57HVZSs+fvPZtMdxvh4FCf8m4C9yCRUvhnMrAPAfprAlSrVYzLUADUyACTABJsAEmAAT8CPga3NZ7FhHkHVGwFv7jD4bIAEZkbUgAC8LjMdjGo1GNBwOaTAY1BJkQ0ZkLbwggYYDsNIEsvBERN+MJ17uk7eqrgAAAABJRU5ErkJggg==" InformativeScreenshot="287eac64e83ab32badd356e243b68ba6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Shopee Indonesia | Jual Beli di Ponsel dan Online' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;dtshopee&quot;)]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Harga'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Nama Barang'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Link'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Terjual'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Kota'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text' name2='Column2' attr2='href'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="100">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://shopee.co.id/search?keyword=ssd%20860%20512gb%20samsung" DesignTimeRectangle="1161, 888, 18, 18" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' idx='4' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' type='' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVDhPtZOxDcQgEATdf0pEAURQAGUQEZFRABHxWvuSJWxj+Df3wSQcGmn3YKu1QoL/iWKMMMYg53w6n3ETlVJgrYXWGiml02zEYzTvPZRSCCF051eGHVFCGaW9ecu0bMZjTOfcJ3bvDpmKCIvnAkZL+EpE2iX0ZD+JGG9JJBLtKJuxXpctsv7lB9mWuvRFxD7tW4REFTv1ZcbAJjPYHQAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ssd 860 512gb samsung Harga Terbaik - September 2021 | Shopee Indonesia' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="570, 18, 990, 4146" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl aria-role='main' tag='DIV' /&gt;" InformativeScreenshot="66616faf22f482d430cd373690e60504.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ssd 860 512gb samsung Harga Terbaik - September 2021 | Shopee Indonesia' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAzxJREFUWEe9Vl2ITVEUHkKJ4sEDSSkepM4+d5wGk2JKojj73DHdQn6iKJOHeRAvyg0PiFBeRKE8ECYpefHkiadJPCj5e0HUOefOLyaOb+1Z19n33jXXmZk7vvrqtNa397f22j/3No0HSaEwI9S5zXGgDhPpm2KcnlxE2t0X+epb6DuJTYpRjmWTg0irc2w2DN4Du5j0PWxy0LC8sShptWnEwPkCruXwX1CMcqQhLYcbg6TQOjPynbfg75KvVnO4BpQjDbrwjsZweOKItbOf23uTQ6MCmhukpTEcmjjQ2m6aNPTdLRwaFXQjeKu6OTRxhFq9okkHtnoLODQqSGOKxRgOZYMx0SqWSPvKk4r5GlIHaIyUG2FtcQgOGpP/QjXAtilwj7/K4saTrivbpsDpfS+J6xFt/o7Jfkm5esSYN2ybAm15KYlrqJ0+FFuM896SpFicmhTbptF3qN1DiPeIY6pIOrZNgTPwTBJXUg3EeccjY7x22/D2X4bxGUy4Jym0zU6SZAq+H8hjU0LzlG1T4Aw8kcQ2MbBotIIJtiPEHJeoyOqcwEfG1EaWykuBWtUXNC+XcmOidu6wbQocjFui2GKvzq0ZLLgLy7984yUWe41tU6CqK5LYJu05aemdpxsgabIQBVwwpjbQgfOS2Ca9blGgdht9PrcYB/csCv8kaesRCzlpTG2ggBOSWKa6TbeBxtGNoB+pbLdohOjgEWNqg4KSuB7Ryh6chy50Yy4VEvvOUcR+StoKanWQbVOEgeoUxZmo+sv/B1HAcVljUbs7jakN2ltRPAbGOrfB/GP2naHqnE10LM+2KeK86pDEYyFWf5HmwvfH6pxNeK03pjZKgbtREldQq8f13oAocPcmB7zptCVSvsxS3l3JtinokZHEZcL4udF1eMvw/bDqHRgKA+c0HcQsW0mvqTG1gX3JSWKbML7au92bR3raa1pJb3tza1jw5lAMRez41+qJg0HLItJXoKRXLJXE1cR78QN7fZeuEh26qL15Ha0asfuSXiJdW7ZN0V9omS+JJ4P0H4JtU2S5Pg3iZ7asBU7xdWFAQxn76hTb1SLZpWbRXcb+vsaB+9BQaucFeKyy/U1NfwDIiGWwXJXQnwAAAABJRU5ErkJggg==" InformativeScreenshot="74a1e1911b8cb15e8ef5a97190aab661.png" Selector="&lt;html app='chrome.exe' url='https://shopee.co.id' /&gt;" Url="https://shopee.co.id" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="412,85" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="shopee.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,252" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="412,161" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[Saved.Values(Of System.Data.DataTable)(&quot;dtshopee&quot;)]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>
