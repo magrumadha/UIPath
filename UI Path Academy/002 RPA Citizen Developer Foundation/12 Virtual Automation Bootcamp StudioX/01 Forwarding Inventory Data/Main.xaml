@@ -1,0 +1,314 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1041,4847" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="562,4782" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="520,3545" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,3324" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Vendors'" sap:VirtualizedContainerService.HintSize="466,165" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="468, 363, 200, 46" ElementType="Button" FriendlyName="'Vendors'" FullSelectorArgument="&lt;webctrl parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dashmenu' tag='BUTTON' type='button' aaname='                      Vendors' check:text='Vendors' /&gt;" ImageBase64="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" InformativeScreenshot="404282037b2d73ba7510350070bdaccb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="466,359" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,282" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Download Vendor List'" sap:VirtualizedContainerService.HintSize="360,165" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="679, 371, 176, 26" ElementType="Text" FriendlyName="'Download Vendor List'" FullSelectorArgument="&lt;webctrl parentid='dashmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dashmenu' tag='A' type='' aaname='Download Vendor List' check:text='Download Vendor List' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPySURBVHhe7ZdZTsNADIZzmt6LXiXiKOlJgLIKuAAPfSyboAIeh9gzk9geZ6MpVSJH+tUm47HH9hcXsp+fH/f4+OjssmvKFzAMLGff39/u4eEhPLbLrmlewDCwnH19fbn7+3sHnybTVBUZzna7nbu7u0sMTKYpCRgGlrPPz093e3urGplMUxEwDCxnHx8f7ubmRjUymaYiYBhYzt7f39319bVqZDJNRcAwsJy9vb25q6sr1chkmoqAYWA5e319dZeXl6qRyTQVAcPAcvby8uLW67VqZDJNRcAwsIxAX1xcqEb7aeOKk4VbLFLlZ5r9gfVUuOVi6YonZW1vrV3ekNdmtSxzzt1aPPfyNVquNsraHho717PcLU4Kt9HWSq1Py76edg9FrEUPu78IGEagn5+fDwp00mQs9hGgPhLQrWsAyiHO9M9A99WhgQaWEejz83PVaD81AA3CRtKpJaZ5lXQ6wbAorLgADPiCz7KJK/AdfZEYSZObYgbhGcm6mLJ+8sa9eQvQYYIpQPDJ5sGvfdbn8SAU7LxyqqOvuFaep3euUJfybEXcL+sAGjKhw8CqzhLOyeo1wsshBQwfD+gIHxY8FLsqJL/nb3VsDIELio3rAYiqWMIvA7o9poeZAhF8h3XfnPoMEaYmoPWJ6X36PfQ7yJ9HwlCti/PxFybWqGeuAcDWP3t6Ay3z4Pe8l+OqAnq73R4BaLKGzeHTjwGA3+M6FKichmUBo18opv8uixkKGBtBfXbFpM+D6qb5s3MA0thc6R56NrXRJG+WB4rGU2IPybUjb9SfgeY6NNDA8tGBTpsFgsLEIpPvUNiyILDHwwFrFHYej/kmjeuOGYR7ymZFNTatLdcgBhYHHIGgcSr1AFoFss6lM9dRgQ7x4vkFvLg2T6AHFLy8h4JB88EWIYAmwB74rApEmhz8MN+kcZ0x0dY3Jfprn0I9gKb70H89NSkQmtLzSl8SyDqXfrnK/UIDgK6EL7CvYXxx8SyzBJpOKza5gmSRwQb/KYrPoCF5+Q/gkvgnTQ5+moDuiqkVvm4an65eaWxN0a8EQIeuVrpO4ymxB+Sa1FoT+BgKdBA9u1bXsXQ8oLGA9Lm3qxOV9/WeujHBhjVqANAdMSVAeA/xo72ABBsqodJU5SEB8menL0kCAgOK58rXY2365Tou0LIHPtasJnT82amlFU/YJknLpnQ3ObFJGtcWM11DXwRif+/Xl6siid0kbL4GRwV7ELHpk2t8qUB5eZ7eufYFOu6lCmdiE1raJrHgufjFGEH/ALTJ9H8yoE2zkgFtmpUMaNOsZECbZiUD2jQrGdCmWcmANs1KCdB22TXly4C2a1aXB3rrfgEEE1Xsg/rA+AAAAABJRU5ErkJggg==" InformativeScreenshot="be8b43178a81425d46728f1b20771c8e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:GetLastDownloadedFile Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[string.Format(&quot;{0}\Downloads&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]" File="[Saved.Values(Of System.IO.FileInfo)(&quot;vendorList&quot;)]" sap:VirtualizedContainerService.HintSize="466,467" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
+              <ui:GetLastDownloadedFile.Body>
+                <ActivityAction>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,255" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Download Vendor List'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="679, 371, 176, 26" ElementType="Text" FriendlyName="'Download Vendor List'" FullSelectorArgument="&lt;webctrl parentid='dashmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dashmenu' tag='A' type='' aaname='Download Vendor List' check:text='Download Vendor List' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPkSURBVHhe7ZlrTsMwDIB7p52LXaXiJtsheIPGjsEYIEDAzxA7Tms76Qt1VK38SRVrkiax/TW8ip+fH7ff751hzBlwGFwuvr+/3ePjIzUbxjwBh8Hl4uvry+12O2o2jHkCDoPLxefnp3t4eKBmw5gn4DC4XHx8fLj7+3tqNox5Ag6Dy8X7+7u7u7ujZsOYJ+AwuFy8vb2529tbajaMeQIOg8vF6+uru7m5oWbDmCfgMLhcvLy8uOvra2o2jHkCDoPLxfF4dFdXV9RsGPMEHAaXUejLy0tqHpOj25yt3GqVXuUUf/Z+2rj1au02T3Q/KntXNsR13K59zKUfkSPkaL090v1IjB3rrnSrs43fbZ79ua/refd/mzEXPcb9BXAYhX5+fj6p0EmRMdkTSD2R0K19IMop9vTPQvfl1EKDyyj0xcUFNY9Jg9AAFpKfWuo0r4JOTzBMikguCANzwVdfxC3MHediayRFblqTwD2yfnXKhpM3Plu2CE0nWEYIebIF8es569WCCBuxX32q41yxz++nd6yQF7+3TXxe5wEYckLTgVXthfYp8jXCy6EBh6cTOsqHCadkV4mU9/KtjoVhckGysZ+EqJKl5hVCt68ZZOZC0NzUH4pT7yHK1CR0/sQMc4Zn+Gcg7EfLUPWr/ckXJuaoZ6wkYOuPPb2F1nHIe1nLcamEPhwOEwjN+rA48vQTAuDn2A8J8qehT2CcF5IZPutkUgJjIficXWtmqIsW9i4FSNeWpM/wvWULzeIWcSB8vczaQ2LtiBv5s9CSUwsNLk8udFosABITk8w+Q2J9QuCZIAf0cdnlemJuVrjuNQl8xhcrXo1Fa4uVEGJJwVEIvk519RA6K2QdS2esowpN68X9K3mxb5lCD0g43PmEQfFhLEoARYBn4GuVIFZkQszNCte5Jo4NRYnztZ9CPYTmz+H89anJhciR7lfPpYWsY+kXq35eMUDoCnyBQw7ji4t7WaTQ/LQSJxehkwxj8Jei2AYFKf0vgGs2Pysy0SR015q5xNdFk6drIF07R5xXC5CXribt5+tl1h4Qa5LrHDDHUKEJvvdcXsdiOqExgbw9jKsD1fceeqYuDI0RhRogdMeaWiC8h/XjeCUJFlRLlaOKQwsU9s5fkkQEIZSMVfbH3PSLdVyhdQ3CWos6oeO3nfrKJU+NTYLWRaHktBQZEGOSwrWtmfbhXEzicB/619tNsnYTWPycHJXsdLExfWKNLxVcpd9P71j7Ch2f5RftSZzQemyyFrSr7xgj8A9CG8b/YUIbi8KENhaFCW0sChPaWBQmtLEoTGhjUZjQxqIwoY1FYUIbiyIIfXC/CvZ61VLsX7wAAAAASUVORK5CYII=" InformativeScreenshot="be8b43178a81425d46728f1b20771c8e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ui:GetLastDownloadedFile.Body>
+            </ui:GetLastDownloadedFile>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="466,1811" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" TemplatePath="[string.Format(&quot;{0}\Downloads\Vendor List.xlsx&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]" UseTemplate="True" WorkbookPath="[Saved.Values(Of System.IO.FileInfo)(&quot;vendorList&quot;).FullName]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1517" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRow DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="412,1427" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[Excel.Sheet(&quot;Vendor list&quot;).Range(&quot;_FilterDatabase&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRow.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1242" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Vendors'" sap:VirtualizedContainerService.HintSize="358,50" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="468, 363, 200, 46" ElementType="Button" FriendlyName="'Vendors'" FullSelectorArgument="&lt;webctrl parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dashmenu' tag='BUTTON' type='button' aaname='                      Vendors' check:text='Vendors' /&gt;" ImageBase64="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" InformativeScreenshot="7d6be89b9d29d0aefee8459167af6a6c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Vendor Inventory'" sap:VirtualizedContainerService.HintSize="358,50" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="679, 397, 176, 26" ElementType="Text" FriendlyName="'Vendor Inventory'" FullSelectorArgument="&lt;webctrl aaname='Vendor Inventory' parentid='dashmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vendor Inventory' parentid='dashmenu' tag='A' type='' check:text='Vendor Inventory' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAeCAYAAACFSjS6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALMSURBVHhe7ZfRceMgEIavJxV19xK1kBI07kQuws+ZlBFPeuBgQbAsKxxnIsVa/9+MZoxAsGg/QP5zvV7d5XJxAByZ4HBwGUIDE0BoYAoIDUwBoYEpIDQwBYQGpoDQwBQQGpgCQgNTbCz0p5tfBjec3lNZ8DG7cRjd/JHKP8UP9/t5Ht3wMvvZ/DJv02PE8cBsv0OHJAyT05R+P3nZt0gQhH5athfaqzwNgxvPMg3x/vSWiiS+Fzxd+b4niD+eZ2qv1QdocaS68TQJodNJsTzPT4wgv5dkXp5XThMpdC8eikP0Qc/neyIWLigtxMnNob2sr94P2yCq+/UiDrFMPs6R6v65178yDyIHBthB6JUdju/c/HdA7LBR1lKm/lh7qs/9L8Is7eVnjyjTWNqCK2hCr8Yj55LGi9LE33ysagGkWEqsYjMIffP3SGMxiUU5xlliafIg+zPALkJLQevE8oQX6OWnxFZJD1T9KbsMr28E8/D6JrYWVeivxkN1TPZGoNB+PZZqrOr5dnEEePt+nLG+t5CPyD5Ce6qXqwhQjk12fSUxigSxz3iv2ZWIvkSS+4Su6/nCpN/aPDuxVGNVQouFk+DjNXGmRVBOi/68j8huQvOdkr/0tcRwjiZ0mWt9+uixMDYXmtWHsXqxHJT9hM7JlYnQj05OXyAlsbyeLaQMr1ckktwt9BIT/SFjY2uxcJRY1oXW3xtvrwkdx4h/PK19bgR2FDqJ4RPd7FKUaJ7IOlm3BKqFi8+W/lI5Py/Kmwid2jRzlbF4uOR3Ce2R702UVaGXGG7M+ajsKrR/xbRzaTtDlj1dvM1dAvkr7oy8fklium70JfmO0FEuba7xHeRY+I59S+j8LGuTxolX79mCnI8ldhYaPAJBaIufGwEI/XSE06p/Ih0ZCP1MrH4G2QFCA1NAaGAKCA1MAaGBKSA0MAWEBqaA0MAUUeir+w/HqTpDSHjJOwAAAABJRU5ErkJggg==" InformativeScreenshot="265d0291b6d458a99acb870b967f03a5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="Select Item 'Vendor Code'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[CurrentRow.ByField(&quot;Vendor code&quot;)]">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="5">
+                                  <x:String>DE325476</x:String>
+                                  <x:String>FR065748</x:String>
+                                  <x:String>IT145632</x:String>
+                                  <x:String>RO094782</x:String>
+                                  <x:String>RU567434</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/inventory" DesignTimeRectangle="468, 369, 485, 34" ElementType="DropDown" FriendlyName="'IT145632'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" InformativeScreenshot="6eff99b73e538ffbbf9a604101720cbb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Vendor Inventory' /&gt;" SearchSteps="FuzzySelector">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="468, 344, 91, 20" ElementType="Text" FriendlyName="'Vendor Code'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Vendor Code:' check:text='Vendor Code:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAYCAYAAACcESEhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVGhD7ZVbjoMwDEXZE+satoK6E1hJ1WVU6se8+xqaiSF27CSQVED5yZVuJdJgOydOKFTWZsrwN1SGv6Ey/A2V4W+oDH9DZfgbysA/qeatVGVZqno/jFgdVK3Hy7JSzdEMLal93eet2pMZWFaH3bAu8lujVztTC9VMnX9qq6G43cGMGJlE3vhSWg2+bSjftW6pGVoavjo2qgoUhp2DJ4I2qbc8DTS3xVhgd6F4ksx/oYVQLcZi4/H9WtXY1YHGoDpFp9vc6flA8ZqnuIw1sLjzER4FdTZEJkBbuN4RR1PS8W70czomiBzEYP+qxDyBqxJAcAjRfPGaY1yS4NMkk5iC9i9hEX5QLILgYxInHj0HNsyNQZvBFj9AtvB96CgzR3R9WNF80ZrjXMYk4dPCoGMwKHaP33FkAxuLslAkBNxMUZQoFHOwhYBS5gilzAHF86XXHLDT6a4c+DoU7uquHo4jdc9EEjNnPvxAF4Gehu82DhPEojXF882CT3nC8uBjYLRNOlIoUwy+jY0xMKbNI480yM4Z4qbA12/hlSkAMFDOaR3NF605zmVMPnwW3A1IC3KMsKPwRWxpWnzyBze2WAbaM3t3tQ8u44Ab6FxDAfgsWODOchPZjkmBD+JQ9LXQ8iNs5AIRdaTCH4Q1kUUtRpP5QPGap7g8BT/rNRqF/8he3QSfBvVP9mtcaNNDx/wH7rLXdIHQEfZdP4BvYD3Ifc1e1EUP3kBHwJf7Q52Nf29h/2TPdsGhA2wY/L526kv789KpD/C5U+/ZC7tT//pTFmbr1YYAAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Check Inventory'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/vendors/inventory" DesignTimeRectangle="468, 418, 127, 34" ElementType="Button" FriendlyName="'Check Inventory'" FullSelectorArgument="&lt;webctrl id='buttonOrder' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonOrder' tag='BUTTON' type='button' aaname='Check Inventory' check:text='Check Inventory' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIMAAAAmCAYAAADnTCg7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVHhe7Zs9bhRBEIU5CgFIvgwBmTM4BBISMYkjCDmBI5/CG/gAWBtttEgrEicrWXLWTPVPdVV39fbsetbAzCvpyZ7pv+p63/RsMq8cAhEDMCA4FAw/N7/c5Zcf7s37z+71u0/QTEX+ks/ktwyGgRqo09vLr+7iwzd38fE7NFcN/pLP5LcEgmEgUjwI1mBoliK/yfcUDANRghNhYRr8Jt9TMAz0LjEHQLMW+Z4CMCxcgAFiAQaIBRggFmCAWIABYgEGiHUGGG7d3WOcKMZ+fSva791muLdZyTET6Xrr9u7J3V0bbaVWD0MWD+7GantRUT1G5nxmTQuDN8M23+3u1TVgSJolDOFE0CBEKZMiDDsyI0VpSnG6PG7dlWyP0KXgNUsYvOGNnAoYrtZPA7BbtS6Ps8DxaxXjOaS50ex1yCVEGhcflBj5AdH3Zf60zn695fbN7zo3n0tZsxGaDobRT2XcKCcbjeeTo4bqZifbI0xF4fy1zMEbeCAfC4Y0D7en8eWaCZ6QU1V8NXdvv9Qu8wz98/71dciz7p9zC/PLXMdqOhisp8dUmXxRTJqnojoXrCq8VIJhRX87BbFgUPPqPDWQsuA5t9CW+wcDO/stxpv7E7la7Sq34sQ6Rv8cDP5/M0LBtCmFfCFSdHI5EgbVXxZcranjFBjM/Yn1LBh8buke/d+qT0fTweATrp+QWiNgKDcrNAYGmvtgP9KxMIhr3zfN3d33C8Ag5qDxcq1jNB0Mxrs+SxakU5zCpFJ2MaKkMQKMqh/paBiSUeFHZr5f99Pq7Ne3ZxjM/YlcW/un3MIPy3btepoQhkHRAA1EKIbe/KHilD+wBinjyvECwuIp9fO2inMCDGEMRV6Dx6p15Njefqldzhf65xrq6zrPqJTbodOwo2lh8ArJy7DgaBcn98lRGBqh42ge2QZYSafAkPIyzPCnhog8rr/fNLYEIIWsXxMGM9/jdAYYoL8jgqFxCo4UYJiL6KR7xiuCBBj+e8VX4TNPBRJggFiAAWIBBogFGCAWYIBYJgz4vG6Ban1ehw9vl6fmh7f4JH9BGvwln8lv85N8CmogUqgTvUugeYr8JZ8lCBQKBsSyAzAgYjj3B1JSEg1W7p4sAAAAAElFTkSuQmCC" InformativeScreenshot="ac453f6bcc2fec56cbc32e2437af872b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Vendor Inventory' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;dtDataVendor&quot;)]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Supplier code' ReferenceIdx='0' Name='Supplier code'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Supplier' ReferenceIdx='1' Name='Supplier'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Item' ReferenceIdx='2' Name='Item'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Unit' ReferenceIdx='3' Name='Unit'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='QTY' ReferenceIdx='4' Name='QTY'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='COST/Unit' ReferenceIdx='5' Name='COST/Unit'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="445, 393, 1030, 407" FriendlyName="'TABLE'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" InformativeScreenshot="8f2a36780bf37cbb5f54b7e4f11ca99e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Vendor Inventory' /&gt;" SearchSteps="Selector" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[Saved.Values(Of System.Data.DataTable)(&quot;dtDataVendor&quot;)]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[string.Format(&quot;Output\Inventory_{0}_{1}_{2}.csv&quot;, CurrentRow.ByField(&quot;Vendor code&quot;), CurrentRow.ByField(&quot;Vendor&quot;), Notes.Sheet(&quot;Date&quot;).Cell(&quot;YYYYMMDD&quot;))]" sap:VirtualizedContainerService.HintSize="358,151" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Home'" sap:VirtualizedContainerService.HintSize="358,165" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reboot-your-skills" DesignTimeRectangle="413, 248, 37, 16" ElementType="Text" FriendlyName="'Home'" FullSelectorArgument="&lt;webctrl aaname='Home' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ol&amp;gt;li&amp;gt;a' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Home' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ol&amp;gt;li&amp;gt;a' tag='A' type='' check:text='Home' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAUCAYAAAAQhBSFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVEhL7ZMxDoMwDAD7J57FD3gCEq9g4wMVAyMLEqzsIJ6Q2U1MTO0QVYDSClUZTiKJcc5O8lBKwd2JkqGIkqFgkgtUxRPyQQYgQwtJ1kLnzv+If5ZcY5PMUo4sfoQ8a6Aaekhpvehhxnn6R69PFK/B/LS2d7ggaQU3MXdsZVCMjZlYV7J4twGTKU4WsZPkFUlsIt/Ri8SrFC9WSBlMDizC35i5bkT86U5igq1LhD3iD5JpvWzjtyR12cPdJL17Ms7fSf5NHDhuv+S6p1jz8LWHc0zSfouHshe/IGmwYubuGPijOCupwStEuTRuZ5nkfYmSoYiSYVDwArdMwfd4ucngAAAAAElFTkSuQmCC" InformativeScreenshot="bc58bbb178d4b8afad209865a7db78a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="FuzzySelector, Image" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRow.Body>
+                    </ueab:ExcelForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="466,272" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="452,195" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="412,78" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b57fb3ab54b16a0c428c9b5d183f8e96.png" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard'/&gt;" Url="https://acme-test.uipath.com/reboot-your-skills" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <umab:OutlookApplicationCard Account="agungtrisnandar@outlook.com" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="520,665" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+      <umab:OutlookApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,481" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="Inventory List" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="412,391" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Inventory List" To="citizen.developer@uipath.com" UseDocumentAsBody="False">
+              <umab:SendMailX.Files>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">[string.Format("{0}\output", System.IO.Directory.GetCurrentDirectory())]</InArgument>
+                </scg:List>
+              </umab:SendMailX.Files>
+              <umab:SendMailX.HtmlBodyFromFile>
+                <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                  <umabh:HtmlContentArgument.RuntimeImages>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </umabh:HtmlContentArgument.RuntimeImages>
+                  <umabh:HtmlContentArgument.ValueMappings>
+                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                  </umabh:HtmlContentArgument.ValueMappings>
+                </umabh:HtmlContentArgument>
+              </umab:SendMailX.HtmlBodyFromFile>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umab:SendMailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:OutlookApplicationCard.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </umab:OutlookApplicationCard>
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[string.Format(&quot;{0}\output&quot;, System.IO.Directory.GetCurrentDirectory())]" sap:VirtualizedContainerService.HintSize="520,402" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="404,168" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="362,78" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[CurrentFile.FullName]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+  </ueab:SequenceX>
+</Activity>
